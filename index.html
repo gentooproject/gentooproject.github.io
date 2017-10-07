@@ -4,13 +4,24 @@
   <p>1. El sitio funciona con github, por lo que el uso que hagas del sitio permanece en secreto para todos, incluyendo a los creadores del sitio (@princessgentoo).
     La información del uso del sitio la usa github para mejorar sus servicios y asegura que esa información no se usa para identificar a nadie.</p>
   <p>2. Servicios como Cloudflare invalidan el punto número uno, y permite que incluso los dueños del sitio web puedan obtener información sobre los visitantes tales como si ip, su país y navegador web; por esta razón se evitó el uso de CDNs.</p>
-  <p>3. Es el primer acortador de links 100% transparente, pues los sitios con github muestran públicamente el código con el que funciona todo el sitio:
+  <p>3. Ni siquiera Github sabe que estás visitando un link acortado, porque el link se genera en tu PC.</p>
+  <p>4. Es el primer acortador de links 100% transparente, pues los sitios con Github muestran públicamente el código con el que funciona todo el sitio:
     De esta forma se puede descargar el sitio entero ejecutando:</br>
     <b>git clone github.com/gentooproject/gentooproject.github.git</b></br>
-    Y puedes explorar sus archivos en:
+    Y puedes explorar y descargar sus archivos en:
     <a href="https://github.com/gentooproject/gentooproject.github.io>https://github.com/gentooproject/gentooproject.github.io</a>
-             Es importante destacar que github lleva un registro estricto de cualquier cambio y un historial de versiones.
-  </p>
+Es importante destacar que github lleva un registro estricto de cualquier cambio y un historial de versiones en tiempo real. Por lo que cualquier mínimo cambio aparecerá registrado y podrás consultarlo en el link de arriba.</p>     
+   <p>5. rpm.li no aloja ningún contenido ni utiliza ninguna base de datos. Por un lado porque una base de datos puede ser comprometida, y segundo porque mantener una base de datos sería vulnerar la privacidad de los que usen el servicio al mantener una lista de los sitios que se visitan y registran. Lo única que aloja rpm.li es un javascript
+  <p>6. Dependiendo de la url ingresada, por ejemplo: rpm.li/123, donde 123 es el id, el javascript carga por medio de esta id el contenido de un sitio de pastebin.</p>
+             Sólo los miembros con cuenta pro o premium pueden subir hiperlinks a pastebin, los usuarios anónimos y standard sólo pueden subir links planos.
+             
+             <h2>Consejos para aumentar la seguridad:</h2>
+             <ul>
+             <li>Para evitar leaks de DNS y doble consulta de DNS, puedes agregar rpm.li a /etc/resolv.conf y así evitar un cambio no autorizado de servidor (como que deje de usar Github)</li>
+             <li>Edita el HTTP referer en tu explorador web para que los sitios que visites no sepan que los visitas de pastebin o rpm.li</li>
+             </ul>
+ 
+            
     
  
 
