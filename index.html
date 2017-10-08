@@ -9,9 +9,13 @@ El artículo 12 de la Declaración Universal de los Derechos humanos establece L
 
 <p><img width="400" height="311"  src="/img1.jpg" /></p>
 
-¿Sabías que el sitio de Snowden <a href="https://freedom.press">freedom.press</a> utiliza Cloudflare?. También el sitio web de Qubes OS, el cual se perfila como uno de los sistemas operativos más seguros que existen (usado por Snowden) En lo personal uso y también puedo dar constancia de él.¿Por que usamos Cloudflare? Porque el mantener un servidor es bastante costoso,Cloudflare es una solución para las personas que no podemos invertir gran cantidad de tiempo, dinero y recursos humanos.
+Este sitio, Qubes OS así como el sitio del que es responsable Snowden <a href="https://freedom.press">freedom.press</a> utiliza Cloudflare, el cual tiene acceso a información confidencial como tu IP, tu navegador web, tu sistema operativo. .¿Por que usarlo? Porque el mantener un servidor es bastante costoso,Cloudflare es una solución para las personas que no podemos invertir gran cantidad de tiempo, dinero y recursos humanos. Nos permite implementar de manera rápida, y económica soluciones de seguridad de alta tecnología como HTST.
+Para empezar Cloudflare ofrece HTTPS gratuito para cualquier sitio, entonces un internet sin HTTPS ya no es justificable a pesar de que la mayoría de las páginas web no utilicen HTTPS; segundo gestiona los certificados de HTTPS de forma automática y de esta forma, la página nunca dejar de funcionar ni tendrá que enfrentarse a certificados expirados.
+Tercero, ofrece certificados comodín HTTPS para todos los subdominios, que si bien esto ya es un servicio de pago, son más accecibles que comprarlo con otras compañías.
+Cuarto, permite implementar HTST, que es un protocolo de alta seguridad que busca solucionar las débilidades de TLS (HTTPS), el cual de otra forma para la mayoría de los servidores no podra implementarse.
+Quinto: También otra tecnología que permite utilizar Cloudflare es DNSSEC que garantiza que la resolución de nombres de dominio como rpm.li, google.com no sea vulnerada. Estas tecnologías son el standard para sitios como google.com, pero están disponibles a todo el público en general gracias a Cloudflare.
      
-  <p>3. Ni siquiera Github ni Cloudflare sabe que estás visitando un link acortado, porque el link se genera en tu PC.</p>
+  <p>3. Ni siquiera Github sabe que estás visitando un link acortado, porque el link se genera en tu PC.</p>
   <p>4. Es el primer acortador de links 100% transparente, pues los sitios con Github muestran públicamente el código con el que funciona todo el sitio:
     De esta forma se puede descargar el sitio entero ejecutando:</p>
     <p><b>git clone github.com/gentooproject/gentooproject.github.git</b></p>
