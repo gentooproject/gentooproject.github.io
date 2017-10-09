@@ -18,6 +18,8 @@ El artículo 12 de la Declaración Universal de los Derechos humanos establece L
 <li>Permite implementar HTST, que es un protocolo de alta seguridad que busca solucionar las debilidades de TLS (HTTPS), el cual de otra forma para la mayoría de los servidores no podra implementarse.</li>
 <li>También otra tecnología que permite utilizar Cloudflare es DNSSEC que garantiza que la resolución de nombres de dominio como rpm.li, google.com no sea vulnerada.</li>
 </ul>
+
+<p>De esta manera, todas estas tecnologías están implementadas en rpm.li, en excepción de DNSSEC, tecnología que se busca implementar como uno de los objetivos de este sitio. Se está conteplando utilizar un certificado SSL que utilice sólamente los protocolos más actuales y poderosas dejando de dar soporte a encriptados anticuados y obsoletos.
     
 <p>Estas tecnologías son el standard para sitios como google.com, pero están disponibles a todo el público en general gracias a Cloudflare. No se busca dar publicidad a Cloudflare, por lo que a continuación se har una seria denuncia y fuerte crítica a este servicio:</p>
 <p>El gran revés de Cloudflare es el uso obligatorio de sus certificados privados; se ha sugerido fuertemente y hay estudios serios que avalan esta posibilidad, que la NSA es capaz de decifrar 2/3 de los encriptados TLS y VPN utilizando una teoría matemática de números primos. Ante esta violación de los derechos humanos de la NSA lo ideal es poder utilizar los certificados gratuitos y libres de Let's Encrypt, pero para poder hacer esto en Cloudflare hay que convertirse en cliente Premium. La seguridad ideal más económica sería configurando un VPS o servidor dedicado. Pero implica dos cosas: Conocimiento (recursos humanos) y tiempo; el tiempo no es dinero.</p>
