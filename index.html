@@ -98,6 +98,34 @@ img.align-left {
 <li>Permite implementar HTST, que es un protocolo de alta seguridad que busca solucionar las debilidades de TLS (HTTPS), el cual de otra forma para la mayoría de los servidores no podra implementarse.</li>
 <li>También otra tecnología que permite utilizar Cloudflare es DNSSEC que garantiza que la resolución de nombres de dominio como rpm.li, google.com no sea vulnerada.</li>
 </ul>
+									<p>Estas tecnologías son el standard para sitios como google.com, pero están disponibles a todo el público en general gracias a Cloudflare. No se busca dar publicidad a Cloudflare, y es por eso que se hará una denuncia y crítica a este servicio.</p>
+<p>Todas estas tecnologías están implementadas en rpm.li, en excepción de DNSSEC, tecnología que se busca implementar como uno de los objetivos de este sitio. Se está contemplando utilizar un certificado SSL que utilice sólamente los protocolos de encriptado más actuales y poderosos dejando de dar soporte los encriptados menos seguros.
+    
+<p>El gran revés de Cloudflare es el uso obligatorio de sus certificados privados; se ha sugerido fuertemente y hay estudios serios que avalan esta posibilidad, que la NSA es capaz de decifrar 2/3 de los encriptados TLS y VPN utilizando una teoría matemática de números primos. Ante esta violación de los derechos humanos de la NSA lo ideal es poder utilizar los certificados gratuitos y libres de Let's Encrypt, pero para poder hacer esto en Cloudflare hay que convertirse en cliente Premium. La seguridad ideal más económica sería configurando un VPS o servidor dedicado. Pero implica dos cosas: Conocimiento (recursos humanos) y tiempo; el tiempo no es dinero.</p>
+​
+<p>3. Al utilizar el protocolo de alta seguridad de HSTS se genera una supercookie, sitios como facebook, google, googleanalitics, wikipedia, github, y por supuesto rpm.li la dejan, la cual no está reconocida ni contemplada en ninguna legislación  y usualmente es omitida en la mayoría de políticas de privacidad. <b>¿Has pensado en sólo usar tu navegador en módo privado?</b> Es una buena idea. </p>
+​
+<p>Para liberarte de esta supercookie debes seleccionar borrar historial reciente en firefox, y seleccionar la última opción ; idealmente puedes seleccionar todas las opciones si deseas borrar todo tu historial.<p>
+    
+<p><img src="/img3.jpg" /></p>
+  
+  <p>4. Github ni Cloudflare saben que estás visitando un link acortado, porque el link se genera en tu PC.</p>
+  <p>5. Es el primer acortador de links 100% transparente, pues los sitios con Github muestran públicamente el código con el que funciona todo el sitio:
+    De esta forma se puede descargar el sitio entero ejecutando:</p>
+    <p><b>git clone github.com/gentooproject/gentooproject.github.git</b></p>
+  <p>Y puedes explorar y descargar sus archivos en:</p>
+    <p><a href="https://github.com/gentooproject/gentooproject.github.io">https://github.com/gentooproject/gentooproject.github.io</a></p>
+<p>Es importante destacar que github lleva un registro estricto de cualquier cambio y un historial de versiones en tiempo real. Por lo que cualquier mínimo cambio aparecerá registrado y podrás consultarlo en el link de arriba.</p>     </p>
+<p>6. <b>rpm.li</b> no aloja ningún dato ni utiliza ninguna base de datos. Por un lado porque una base de datos puede ser comprometida, y segundo porque mantener una base de datos sería vulnerar la privacidad de los que usen el servicio al mantener una lista de los sitios que se visitan y registran. Lo único que aloja rpm.li es un javascript
+<p>7. Dependiendo de la url ingresada, por ejemplo: <b>rpm.li/123</b>, donde <b>123</b> es el id, el javascript carga por medio de esta id el contenido de un sitio de pastebin.</p>
+             Sólo los miembros con cuenta pro o premium pueden subir hiperlinks a pastebin, los usuarios anónimos y standard sólo pueden subir links planos.
+             
+             <h2>Consejos para aumentar la seguridad:</h2>
+             <ul>
+             <li>Edita el HTTP referer en tu explorador web para que los sitios que visites no sepan que los visitas de pastebin o rpm.li</li>
+</ul>
+
+									
 									</div>
                                                         </section>
 </div>
