@@ -21,16 +21,20 @@ El artículo 12 de la Declaración Universal de los Derechos humanos establece L
     
 <p>Estas tecnologías son el standard para sitios como google.com, pero están disponibles a todo el público en general gracias a Cloudflare. No se busca dar publicidad a Cloudflare, por lo que a continuación se har una seria denuncia y fuerte crítica a este servicio:</p>
 <p>El gran revés de Cloudflare es el uso obligatorio de sus certificados privados; se ha sugerido fuertemente y hay estudios serios que avalan esta posibilidad, que la NSA es capaz de decifrar 2/3 de los encriptados TLS y VPN utilizando una teoría matemática de números primos. Ante esta violación de los derechos humanos de la NSA lo ideal es poder utilizar los certificados gratuitos y libres de Let's Encrypt, pero para poder hacer esto en Cloudflare hay que convertirse en cliente Premium. La seguridad ideal más económica sería configurando un VPS o servidor dedicado. Pero implica dos cosas: Conocimiento (recursos humanos) y tiempo; el tiempo no es dinero.</p>
-     
-  <p>3. Github ni Cloudflare sabe que estás visitando un link acortado, porque el link se genera en tu PC.</p>
-  <p>4. Es el primer acortador de links 100% transparente, pues los sitios con Github muestran públicamente el código con el que funciona todo el sitio:
+
+<p>3. Al utilizar el protocolo de alta seguridad de HSTS se genera una supercookie, la cual no está reconocida ni contemplada en ninguna legislación del mundo y usualmente es omitido en la mayoría de políticas de seguridad. ¿Has pensado en sólo usar tu navegador en módo privado? Es una buena idea. Para liberarte de esta supercookie debes seleccionar borrar historial reciente en firefox, y seleccionar la última opción (al contrario de la imagen); el borrar todo el historial sin seleccionar la última opción resultará en que se converse la supercookie:<p>
+    
+<p><img src="/img2.jpg" /></p>
+  
+  <p>4. Github ni Cloudflare saben que estás visitando un link acortado, porque el link se genera en tu PC.</p>
+  <p>5. Es el primer acortador de links 100% transparente, pues los sitios con Github muestran públicamente el código con el que funciona todo el sitio:
     De esta forma se puede descargar el sitio entero ejecutando:</p>
     <p><b>git clone github.com/gentooproject/gentooproject.github.git</b></p>
   <p>Y puedes explorar y descargar sus archivos en:</p>
     <p><a href="https://github.com/gentooproject/gentooproject.github.io">https://github.com/gentooproject/gentooproject.github.io</a></p>
 <p>Es importante destacar que github lleva un registro estricto de cualquier cambio y un historial de versiones en tiempo real. Por lo que cualquier mínimo cambio aparecerá registrado y podrás consultarlo en el link de arriba.</p>     </p>
-<p>5. <b>rpm.li</b> no aloja ningún contenido ni utiliza ninguna base de datos. Por un lado porque una base de datos puede ser comprometida, y segundo porque mantener una base de datos sería vulnerar la privacidad de los que usen el servicio al mantener una lista de los sitios que se visitan y registran. Lo único que aloja rpm.li es un javascript
-<p>6. Dependiendo de la url ingresada, por ejemplo: <b>rpm.li/123</b>, donde <b>123</b> es el id, el javascript carga por medio de esta id el contenido de un sitio de pastebin.</p>
+<p>6. <b>rpm.li</b> no aloja ningún contenido ni utiliza ninguna base de datos. Por un lado porque una base de datos puede ser comprometida, y segundo porque mantener una base de datos sería vulnerar la privacidad de los que usen el servicio al mantener una lista de los sitios que se visitan y registran. Lo único que aloja rpm.li es un javascript
+<p>7. Dependiendo de la url ingresada, por ejemplo: <b>rpm.li/123</b>, donde <b>123</b> es el id, el javascript carga por medio de esta id el contenido de un sitio de pastebin.</p>
              Sólo los miembros con cuenta pro o premium pueden subir hiperlinks a pastebin, los usuarios anónimos y standard sólo pueden subir links planos.
              
              <h2>Consejos para aumentar la seguridad:</h2>
