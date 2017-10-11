@@ -81,7 +81,22 @@ http://revolucao.etc.br/archives/seguranca-o-que-e-vpn-segura/
 
 <p>Todas tienen por base a la dialéctica. Hegels nos hablaba que la dialectica partía de una lucha de opuestos, llamados tésis y antitésis, y que tenían su resolución en una síntesis. La resolución de la seguridad es la inteligencia: <b>La estrategia</b>.</p>
 
-    
+<b>Modelo ideal de privacidad</b>
+1. Tener el modem con una fuente ininterrumpida de energía.
+2. Tener un rasberry pi corriendo las 24 horas del día, los 7 días de la semana con una fuente interrumpida
+3. Conectar el Rasberry Pi al internet a travez del puerto de ethernet
+3. Conectar otros dos puertos de Ethernet por vía USB
+4. Conectar el Rasberry Pi a un servidor VPN
+5. Conectarse a VPN estando en VPN (doble VPN)
+6. Conectarse a otro VPN estando en VPN (van dos conecciones de doble VPN)
+7. Redirigir el tráfico del VPN del paso 5 a un puerto de ethernet disponible, y limitarlo a la mitad de la conección total
+8. Redirigir el tráfico del VPN del paso 6 al otro puerto de ethernet, y limitarlo a la mitad de la conección total
+9. Instalar otra tarjeta de Red en tu computadora
+10. Conectar a las dos tarjetas de red de tu computadora al rasberry
+11. Utiliza Qubes OS y la mitad de tus máquinas virtuales van a usar el VPN del pasó 5
+12. La otra mitad de tus máquinas virtuales van a usar el VPN del paso 6
+13. Al apagar tu PC, el Rasberry Pi debe simular actividad
+
     Las organizaciones de inteligencia como la CIA y la NSA buscan
     
     
