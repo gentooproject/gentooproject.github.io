@@ -145,20 +145,24 @@ Esta es una estrategia de seguridad en la que acabo de pensar tomando en cuenta 
 <li> Tener el modem con una fuente ininterrumpida de energía.</li>
 <li> Tener un Rasberry pi con Gentoo hardened corriendo las 24 horas del día, los 7 días de la semana con una fuente interrumpida</li>
 <li> Conectar el Rasberry Pi al internet a travez del puerto de ethernet</li>
-<li>Conectar otros dos puertos de Ethernet por vía USB</li>
+<li>Conectar otros tres puertos de Ethernet por vía USB</li>
 <li>Conectar el Rasberry Pi a un servidor VPN (VPN 1)</li>
 <li>Conectarse a VPN estando en VPN (VPN2)</li>
 <li>Conectarse a otro VPN apartir del VPN1 (VPN3), este páso es identico al anterior</li>
-<li>Configurar iptables para que el VPN1 sólo acepte las ips del VPN2 y VPN3, nada que no sean este par de VPN se podrá conectar al internet por medio del VPN1</li>
-<li>Redirigir el tráfico del VPN2 a uno de los puertos ethernet que instalamos, y limitarlo a la mitad de la conección total</li>
-<li>Redirigir el tráfico del VPN3 al otro puerto de ethernet que instalamos, y también limitarlo a la mitad de la conección total</li>
-<li>Instalar otra tarjeta de Red en tu computadora</li>
-<li>Conectar a las dos tarjetas de red de tu computadora el rasberry</li>
-<li>Utiliza Qubes OS y la mitad de tus máquinas virtuales van a conectarse a internet por medio del VPN2</li>
-<li>La otra mitad de tus máquinas virtuales van a conectarse a internet por medio del VPN3</li>
+<li>Conectarse por tercera vez a otro VPN a partir del VPN1 (VPN4)
+<li>Configurar iptables para que el VPN1 sólo acepte las ips del VPN2, VPN3 y VPN4, nada que no sean estos 3 VPNs se podrá conectar al internet por medio del VPN1</li>
+<li>Redirigir el tráfico del VPN2 a uno de los puertos ethernet que instalamos, y limitarlo a un tercio de la mitad de la conección total</li>
+<li>Redirigir el tráfico del VPN3 al otro puerto de ethernet que instalamos, y también limitarlo a un tercio de la conección total</li>
+<li>Redirigir el tráfico del VPN4 al otro puerto de ethernet que instalamos, y también limitarlo a un tercio de la conección total</li>   
+<li>Instalar una tarjeta de Red en tu computadora con dos puertos de Ethernet</li>
+<li>Conectar tu PC a los 3 puertos de ethernet del Rasberry Pi</li>
+<li>Utiliza Qubes OS y el VPN2 sólo lo vas a usar con Tor y Whonix</li>
+<li>Y la mitad de tus máquinas virtuales sólo van a poder conectarse por internet a travez del VPN3</li>
+ <li>Y finalmente la otra mitad de tus máquinas virtuales sólo va a poder conectarse a internet a travez del VPN4.
 <li>Al apagar tu PC, el Rasberry Pi debe simular actividad en tus dos redes de doble VPN.</li>
 </ol>
 
-    Las organizaciones de inteligencia como la CIA y la NSA buscan
+<p>Lamentablemente lograr un nivel de privacidad capaz de atacar las bases en las que opera la NSA es bastante costosa, en este método compramos 4 adaptadores de red, una fuente continua de energía, un rasberry pi, contratamos a 4 provedores diferentes de VPN, y además contratamos sus planes más caros, no nos sirven los planes económicos para esta estrategia.</p>
+
     
     
