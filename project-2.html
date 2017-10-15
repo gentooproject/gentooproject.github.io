@@ -7,7 +7,7 @@
 <h2>Método de codificación:</h2>
 <ol>
 <li>Se genera un hash del link y se envia al servidor para guardarlo</li>
-<li>Se descargan 3 llaves públicas de tres servers de verificación, y acontinuación se envía a ellos encriptado el link para su procesamiento. Se optiene un hash, el cual se comprueba que sea idéntico entre los 3 mismos servers. Y este hash es enviado como respuesta hasta tu cliente para hacer también la validación en tu propia computadora.</li>
+<li>Se descargan 3 llaves públicas de tres servers de verificación, y acontinuación se envía a ellos encriptado el link para su procesamiento. Se optiene un hash, el cual se comprueba que sea idéntico, verificación que hará el primer server del paso uno. Y este hash es enviado como respuesta hasta tu cliente por medio del servidor para hacer también la validación en tu propia computadora.</li>
 <li>A continuación se recibe la url encriptada de uno de los servers de verificación (lo encriptaron con nuestra llave publica temporal) y se comprueba su integridad a travez del hash recibido del servidor.<li>
 <li>Con la extensión se encripta la URL larga utilizando la url acortada como contraseña y se envía al servidor el encriptado resultante.</li>
 </ol>
