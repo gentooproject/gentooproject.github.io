@@ -116,9 +116,26 @@ http://revolucao.etc.br/archives/seguranca-o-que-e-vpn-segura/
 
 <p>Mi propuesta de tu CD de anonimidad es esta, debe contener lo que tengo en el repositorio de Github que acabo de crear, el cual está preparado para Windows que es el sistema más común:</p>
 
-https://github.com/gentooproject/windows-tor-ssh
+<a href="https://github.com/gentooproject/windows-tor-ssh">https://github.com/gentooproject/windows-tor-ssh</a>
 
-<p>Nota: Los expertos sugieren fuertemente que el Tor Browser no se use sin Tor, sin embargo, el propósito de mi proyecto <b>Ultimate Super Paranoic Project</b> tiene como propósito demostrar al mundo una forma mucho más avanzada de utilizar el Tor Browser. Se seguirá profundizando en este projecto y en sus aspectos técnicos durante todo este post.</p>
+<h3>Uso en Linux</h3>
+<p>A veces la banda ancha es un recurso que no podemos malgastar y descargarnos varias veces el Tor Browser puede acabar con nuestro presupuesto. También descargar muchas veces lo mismo (para distintos sistemas) puede no ser efectivo, porque posiblemente se te olvide actualizar en un medio, y en otro no.</p>
+
+<p>También la portabilidad y rápidez del traslado es importante si se quiere vivir en privacidad, una persona que realmente quiere tener privacidad hasta el extremo va a cambiar de ciudad y de vivienda muy seguido. Y posiblemente destruya su computadora cada tanto tiempo.</p>
+
+<p>Por suerte este mismo CD para Windows puede utilizarse en Linux.</p>
+
+<p>Para ello requieres instalar dos cosas</p>
+<ol>
+<li>wine</li>
+<li>fuse-zip</li>
+</ol>
+
+<p>Con fuse-zip podemos montar el archivo comprimido en Zip. De esta manera aseguras que en Linux siempre estás utilizando el Tor Browser sin modificaciones, porque lo estás ejecutando de un medio de sólo lectura. A diferencia de los SSDs, discos duros, y memorias USB que permiten la escritura.</p>
+
+<p>fuse-zip te permite hacerle cambios temporales, así que asegurate de sacar el CD o apagar cuando termines de utilizar el Tor Browser</p>
+
+<p>Nota: Los expertos sugieren  que el Tor Browser no se use sin Tor, sin embargo aquí se demostrará que si se puede obtener una confiabilidad haceptable utilizando máquinas virtuales y varios túneles SSH: Esto es lo que llamo: <b>Ultimate Super Paranoic Project</b></p>
 
 <h1>Análisis de Tráfico</h1>
 
