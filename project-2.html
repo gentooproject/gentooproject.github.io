@@ -1,0 +1,18 @@
+<html>
+<h1>Crear un sistema de desanonimización de acortadores de links:</h1>
+
+<p>Consiste crear una base de datos como la de bitcoin donde los links de bit.ly goo.gl y otros sean almacenados en un sistema similar al P2P, y que se pueda acceder a esta base de datos de forma anónima utilizando Tor o una tecnología similar a Tor</p>
+<p>Los links no se guardarán, sólo su hash con una sal aplicada. O sea que el hash original no se va a guardar.</li>
+
+<h2>Método de codificación:</h2>
+<ol>
+<li>Se envia una solicitud de agregar un link acortado a la base de datos, o nuestro bot explorador lo agrega</li>
+<li>Se genera un hash del link y se envia al servidor para guardarlo</li>
+<li>Se descargan 3 llaves públicas de tres servers de verificación, y acontinuación se envía a ellos encriptado el link para su procesamiento. Se optiene un hash, el cual se comprueba que sea idéntico. Y este hash es enviado hasta tu cliente para que se pueda hacer la validación en tu propia computadora.</li>
+<li>A continuación se recibe la url encriptada de uno de los servers de verificación (lo encriptaron con nuestra llave publica temporal) y se comprueba su integridad a travez del hash recibido del servidor.<li>
+<li>Con la extensión se encripta la URL larga utilizando la url acortada como contraseña y se envía al servidor el encriptado resultante.</li>
+</ol>
+</html>
+
+
+
