@@ -241,7 +241,7 @@ http://revolucao.etc.br/archives/seguranca-o-que-e-vpn-segura/
 
 <p>Snowden nos ha dado a entender que la NSA puede hackear lo que se proponga, así que no se trata de ser inhackeables, sólo que el hackearte se vuelva bastante dificil para que al final desistan. (El tiempo es dinero, y no lo pueden andar gastando).</p>
 
-<h2>Mi resolución: Qubes Os</h2>
+<h2>Qubes Os</h2>
 
 <li>Este sistema es más seguro que Tail porque Tails no previene que puedan hackear tu BIOS ni que escriban en tu disco duro, Qubes OS sí. Aunque se hagan con acceso root, de nada sirve, en Tails si se hacen con acceso root, fin del juego.</li>
 <li>Ahora si conoces Whonix, pues felicidades, QubesOS tiene a Whonix equipado.</li>
@@ -252,5 +252,18 @@ http://revolucao.etc.br/archives/seguranca-o-que-e-vpn-segura/
 
 <h3>Whonix</h3>
 <p>Hasta ahora sólo había comentado formas muy sencillas y espontáneas de usar el Tor Browser, les dije que el Tor Browser era lo mejor para navegar, ahora si le sumamos Tor tenemos claramente anonimidad. Whonix es la mejor manera de correr Tor Browser con Tor, ahí sólo se puede con Tor, pero no te preocupes, que con Qubes OS tenemos la tecnología para usar Tor Browser sin Tor con una seguridad comparable a Whonix.</p>
-    
 
+¿Es buena idea usar el Tor Browser para todo?
+Esta pregunta no es la misma que la de usar Tor para todo. ¿Recuerdas que puedes usar el Tor Browser sin usar Tor? La respuesta corta es que no. Yo te recomiendo usar Tor Browser sin Tor bajo unos escenarios especiales.
+
+<h2>Mi modelo de seguridad:</h2>
+
+<li>Tor browser + Tor: Búsquedas e investigaciones, y visitas discretas a páginas web</li>
+<lì>Tor browser + SSH: Iniciar sección en Twitter, Facebook, Google y páginas que censuren Tor.</li>
+<li>Icecat + VPN + hardening : El resto de páginas web poco confiables, o el blog de tus amigos.</li>
+
+<p>En el tercer punto quiero decir, si tu amigo sabe que usas Tor Browser, tu amigo al revisar su blog y ver la ip de los visitantes al ver un visitante humano con Windows 7 y Firefox con ip de Hungría, va ser obvio quien es el visitante. Más al investigar la ip.<p>
+<p>El hardening serán contra técnicas de Hash Canvas, cambio automático de User Agent, Request Headers, lenguaje y hardening de privacidad en general.</p>
+
+<p>PD: Tu mayor enemigo no es la NSA, a pesar de que crea que la NSA no tiene ningún derecho de que haga lo que hace; si te crees que tu único y principal enemigo es la NSA vas a cometer errores de seguridad contra cosas más importantes<p>
+</html>
