@@ -159,6 +159,20 @@ http://revolucao.etc.br/archives/seguranca-o-que-e-vpn-segura/
 
 <p>fuse-zip te permite hacerle cambios temporales, así que asegurate de sacar el CD o apagar cuando termines de utilizar el Tor Browser</p>
 
+<p>Y si quieren crear un acceso directo en su escritorio creen el archivo tor.desktop en su escritorio usando de guía el siguiente contenido en donde en exec van a remplazar la ruta por donde se encuentre firefox.exe:</p>
+
+<code>
+[Desktop Entry]
+Type=Application
+Name=Tor
+Exec=wine /mnt/1/Tor/firefox.exe
+Icon=/usr/share/icons/Adwaita/64x64/apps/web-browser-symbolic.symbolic.png
+</code>
+
+<p>Y opcionalmente protegerlo contra escritura con:</p>
+
+<code>sudo chattr +i ~/Desktop/tor.desktop</code>
+
 <p>Nota: Los expertos sugieren  que el Tor Browser no se use sin Tor, sin embargo aquí se demostrará que si se puede obtener una confiabilidad haceptable utilizando máquinas virtuales y varios túneles SSH: Esto es lo que llamo: <b>Ultimate Super Paranoic Project</b></p>
 
 <h1>Análisis de Tráfico</h1>
