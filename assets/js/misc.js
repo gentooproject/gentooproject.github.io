@@ -7,7 +7,7 @@ function myFunction() {
 function alertFunc() {
 if( navigator.userAgent.match(/X11/i)
   ){
-    if(window.prompt('Veo que usas Linux ❤, ¡muy bien! , te invito especialmente a mi sitio sobre Linux. ¿Deseas visitarlo en este momento?', 'https://daya.cf/go'))
+    if(window.prompt('Veo que usas Linux ❤, ¡muy bien! , te invito especialmente a mi sitio ¿Deseas visitarlo?', 'https://pinkhat.rpm.li'))
   location.href='https://pinkhat.rpm.li';
   }
 }
