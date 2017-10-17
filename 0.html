@@ -344,7 +344,7 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <p>Ahora modifiquen la última linea de forma que quede así:
   
-  <code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code>
+<p><code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code></p>
 
 <p>Con este paso hemos logrado que la cache, y las operaciones temporales de escritura se hagan en la memoria RAM, y no en el disco duro, aumentando considerablemente la vida de nuestros SSDs.</p>
   
