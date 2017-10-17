@@ -342,7 +342,7 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <code>a=$(date +%s)</code></br>
 <code>touch /dev/shm/$a</code></br>
-<code>rm "$FILENAME"</code></br>
+<code>[ ! -f "$FILENAME" ] || rm "$FILENAME"</code></br>
 <code>ln -s /dev/shm/$a "$FILENAME"</code>
 
 <p>Ahora modifiquen la última linea de forma que quede así:
@@ -361,9 +361,9 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <p>Y crea un archivo en /etc/tmpfiles.d/1.conf con el siguiente contenido</p>
 <code>d  /tmp/1  0770  qubes</code>
 
-<p>Con este paso hemos logrado indicarle a Qubes OS que incluya y cree directorios temporales (en memoria RAM)</p>
+<p>Con este paso hemos logrado indicarle a Qubes OS que incluya y cree directorios temporales (en memoria RAM). Este paso es opcional si se desean crear qubes que perduren durante todo el tiempo que dure prendido el PC</p>
 
-<p><b>Cuarto paso</b><p>
+<p><b>Tercer paso</b><p>
   
 <p>crear el archivo ~/.config/autostart/disposable.desktop con el siguiente contenido:</p>
 <code>[Desktop Entry]</code></br>
