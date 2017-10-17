@@ -319,6 +319,17 @@ Esta pregunta no es la misma que la de usar Tor para todo. ¿Recuerdas que puede
 
 <h2>Firewall + Disposable Machine en RAMDisk + Túnel SSH + Bloqueo de URLs</h2>
 
+<p>Qubes OS separa en sistemas operativos aislados varias partes de un sistema operativo de la siguiente forma:
+  
+  <ol>
+    <li>dom0</li>
+    <li>sys-net</li>
+    <li>sys-firewall</li>
+    <li>máquina virtual actual</li>
+</ol>
+
+<p>De esta forma toda configuración de firewall es inhackeable y bastante segura porque aun y un atacante se haga del control de la máquina virtual, no va a poder burlar la configuración del firewall</p>
+<p>La máquina virtual del firewall se puede optimizar para hacerlo más segura aun pagando el precio de disminuir la fácilidad de uso (las herramientas gráficas)</p>
 </html>
 
     
