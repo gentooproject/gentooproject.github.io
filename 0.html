@@ -350,8 +350,17 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <p><code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code></p>
 
 <p>Con este paso hemos logrado que la cache, y las operaciones temporales de escritura se hagan en la memoria RAM, y no en el disco duro, aumentando considerablemente la vida de nuestros SSDs.</p>
+
+<p><b>Segundo paso</b><p>
   
+<p> Agregar este código después de la segunda línea</p>
+ <code>[foo]</code></br>
+<code>driver=xen</code></br>
+<code>dir_path=/opt/temp</code>
+
+<p>Con este paso hemos logrado indicarle a Qubes OS que incluya directorios temporales (en memoria RAM)</p>
 <h2>Firewall</h2>
+
 
 <p>Qubes OS separa en sistemas operativos aislados varias partes de un sistema operativo de la siguiente forma:
   
