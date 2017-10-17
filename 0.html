@@ -363,6 +363,21 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <p>Con este paso hemos logrado indicarle a Qubes OS que incluya y cree directorios temporales (en memoria RAM)</p>
 
+<p><b>Cuarto paso</b><p>
+  
+<p>crear el archivo ~/.config/autostart/disposable.desktop con el siguiente contenido:</p>
+<code>[Desktop Entry]</code></br>
+<code>Encoding=UTF-8</code></br>
+<code>Version=0.9.4</code></br>
+<code>Type=Application</code></br>
+<code>Name=disposable</code></br>
+<code>Comment=</code></br>
+<code>Exec=bash -c "qvm-remove fedora-23-dvm; qvm-create-default-dvm"</code></br>
+<code>StartupNotify=false</code></br>
+<code>Terminal=false</code></br>
+<code>Hidden=false</code></br>
+
+
 <h2>Firewall</h2>
 
 
