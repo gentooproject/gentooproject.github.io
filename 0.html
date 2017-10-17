@@ -377,22 +377,6 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <h2>Firewall</h2>
 
-<h2>Más hardening aún</h2>
-<p>Quebes Os se jacta de que al reiniciar se perderán los cambios en las carpetas del sistema, es por esta razón que deshabilitaron la contraseña de root. Pero me puse a pensar, podemos llegar más lejos que los propósitos originales de diseño. Deteniendo el area en que puede actuar y dezplazarse nuestro atacante.</p>
-
-<p>Modificación a las plantilla de sistemas operativos:</p>
-
-<ol>
-  <li>Compilar el kernel sin módulos y con sólo lo necesario, todo va a estar incrustado</li>
-  <li>Limitar el soporte a solo dos sistemas de archivos: ext4 y squashfs sin contar los pseudo sistemas de archivos.</li>
-  <li>Deshabilitar el soporte de cargar modulos del kernel</li>
-  <li>Grabar root en una partición con un sistema de archivos de sólo lectura como iso9660, en este caso el sistema de archivos elegido será squashfs</li>
-  <li>Agregar los flags de no exec a /tmp/, /usr/tmp y /home</li>
-  
-  <p>De esta forma, en teoría, el atacante no tiene forma alguna de executar código alguno, todo su hackeo deberá realizarlo en memoria.
-</ol>
-
-
 <p>Qubes OS separa en sistemas operativos aislados varias partes de un sistema operativo de la siguiente forma:
   
   <ol>
@@ -413,10 +397,23 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <p> Vamos a instalar Foxy Proxy Standard (si no lo tienen instalado), de esta manera vamos a bloquear todas las conecciones a las páginas web en excepción de las aprovadas. Una página web normalmente de conecta a varios servidores de terceros  como Google, o un servicio en la  nube, por medio del análisis de tráfico debes descomponer en sus elementos el tráfico de cada sitio web que visites. Y agregar cada conección individual al perfil.</p>
 
+<p>De esta manera no van a poder obtener la IP de tu VPN o tu IP real si no usas VPN, finalmente dejándole a tu atacante una sóla única opción. Man in the Middle</p>
+
 <h2>Más hardening aún</h2>
 
+<p>Quebes Os se jacta de que al reiniciar se perderán los cambios en las carpetas del sistema, es por esta razón que deshabilitaron la contraseña de root. Pero me puse a pensar, podemos llegar más lejos que los propósitos originales de diseño. Deteniendo el area en que puede actuar y dezplazarse nuestro atacante aunque en realidad tenga muy poco tiempo nuestro atacante antes de q.</p>
 
+<p>Modificación a las plantilla de sistemas operativos:</p>
 
-<p>De esta manera no van a poder obtener la IP de tu VPN o tu IP real si no usas VPN, finalmente dejándole a tu atacante una sóla única opción. Man in the Middle</p>
+<ol>
+  <li>Compilar el kernel sin módulos y con sólo lo necesario, todo va a estar incrustado</li>
+  <li>Limitar el soporte a solo dos sistemas de archivos: ext4 y squashfs sin contar los pseudo sistemas de archivos.</li>
+  <li>Deshabilitar el soporte de cargar modulos del kernel</li>
+  <li>Grabar root en una partición con un sistema de archivos de sólo lectura como iso9660, en este caso el sistema de archivos elegido será squashfs</li>
+  <li>Agregar los flags de no exec a /tmp/, /usr/tmp y /home</li>
+  
+  <p>De esta forma, en teoría, el atacante no tiene forma alguna de executar código alguno, todo su hackeo deberá realizarlo en memoria. </p>
+</ol>
+
 
 <h1>VIII. Comprar un router que no te espie</h1>
