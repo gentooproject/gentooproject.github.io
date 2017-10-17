@@ -337,17 +337,14 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <p>Pues porque no solo uso los Disposable Virtual Machine para todo lo que hago, si no que modifiqué Qubes OS para que sirviera la máquina virtual en RAM porque estas máquinas virtuales de sólo lectura sólo funcionan desde el disco duro. Esta función estará disponible en la próxima versión de Qubes Os al momento de escribir esto (16 de Octubre de 2017). A continuación les enseñaré como:</p>
 
 <p><b>Primer paso</b></p>
-<p>Editen en el archivo /usr/lib/qubes/prepare-volatile-img.sh agregandole esto antes de la última línea:</p>
+<p>Editen en el archivo /usr/lib/qubes/prepare-volatile-img.sh eliminando la última línea y agregándole esto::</p>
 
 
 <code>a=$(date +%s)</code></br>
-<code>touch /dev/shm/$a</code></br>
 <code>[ ! -f "$FILENAME" ] || rm "$FILENAME"</code></br>
+<code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code></br>
 <code>ln -s /dev/shm/$a "$FILENAME"</code>
 
-<p>Ahora modifiquen la última linea de forma que quede así:
-  
-<p><code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code></p>
 
 <p>Con este paso hemos logrado que la cache, y las operaciones temporales de escritura se hagan en la memoria RAM, y no en el disco duro, aumentando considerablemente la vida de nuestros SSDs.</p>
 
