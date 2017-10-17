@@ -353,12 +353,16 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <p><b>Segundo paso</b><p>
   
-<p> Agregar este código después de la segunda línea</p>
- <code>[foo]</code></br>
+<p> Agregar este código después de la segunda línea en /etc/qubes/storage.conf</p>
+<code>[foo]</code></br>
 <code>driver=xen</code></br>
-<code>dir_path=/opt/temp</code>
+<code>dir_path=/tmp/1</code>
 
-<p>Con este paso hemos logrado indicarle a Qubes OS que incluya directorios temporales (en memoria RAM)</p>
+<p>Y crea un archivo en /etc/tmpfiles.d/1.conf con el siguiente contenido</p>
+<code>d  /tmp/1  0770  qubes</code>
+
+<p>Con este paso hemos logrado indicarle a Qubes OS que incluya y cree directorios temporales (en memoria RAM)</p>
+
 <h2>Firewall</h2>
 
 
