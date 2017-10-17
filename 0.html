@@ -333,6 +333,21 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <p>¿Porque extremadamente paranoica?</p>
 <p>Pues porque no solo uso los Disposable Virtual Machine para todo lo que hago, si no que modifiqué Qubes OS para que sirviera la máquina virtual en RAM porque estas máquinas virtuales de sólo lectura sólo funcionan desde el disco duro. Esta función estará disponible en la próxima versión de Qubes Os al momento de escribir esto (16 de Octubre de 2017). A continuación les enseñaré como:</p>
 
+<p><b>Primer paso</b></p>
+<code>Editen en el archivo /usr/lib/qubes/prepare-volatile-img.sh agregandole esto antes de la última línea:</code>
+
+
+<code>a=$(date +%s)</code></br>
+<code>touch /dev/shm/$a</code></br>
+<code>rm "$FILENAME"</code></br>
+<code>ln -s /dev/shm/$a "$FILENAME"</code>
+
+<p>Ahora modifiquen la última linea de forma que quede así:
+  
+  <code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code>
+
+<p>Con este paso hemos logrado que la cache, y las operaciones temporales de escritura se hagan en la memoria RAM, y no en el disco duro, aumentando considerablemente la vida de nuestros SSDs.</p>
+  
 <h2>Firewall</h2>
 
 <p>Qubes OS separa en sistemas operativos aislados varias partes de un sistema operativo de la siguiente forma:
