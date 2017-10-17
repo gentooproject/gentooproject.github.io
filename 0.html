@@ -393,4 +393,11 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <p>Este proyecto del hardening de Firewall lo puedes encontrar aquí: <a href="http://roscidus.com/blog/blog/2016/01/01/a-unikernel-firewall-for-qubesos/">unikernel-firewall</a></p>
 </html>
 
+<h3> Crear perfiles y reglas por cada página web</h3>
+<p>En este punto nada puede entrar ni salir fuera de la conección SSH que hemos indicado en el firewall, si bien ahora nuestro atacante está confinado dentro del túnel SSH y tratar de cargar algo fuera del túnel le será negado por el firewall, todo debe arreglarse dentro del túnel.</p>
+
+<p> Vamos a instalar Foxy Proxy Standard (si no lo tienen instalado), de esta manera vamos a bloquear todas las conecciones a las páginas web en excepción de las aprovadas. Una página web normalmente de conecta a varios servidores de terceros  como Google, o un servicio en la  nube, por medio del análisis de tráfico debes descomponer en sus elementos el tráfico de cada sitio web que visites. Y agregar cada conección individual al perfil.</p>
+
+<p>De esta manera no van a poder obtener la IP de tu VPN o tu IP real si no usas VPN, finalmente dejándole a tu atacante una sóla única opción. Man in the Middle</p>
+
 <h1>VIII. Comprar un router que no te espie</h1>
