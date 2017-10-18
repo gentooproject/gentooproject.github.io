@@ -103,13 +103,15 @@ http://12mars.rsf.org/2014-en/2014/03/11/usa-nsa-symbolises-intelligence-service
 <h2>Torrents</h2>
 <p>Tor tiene una gran desventaja y es que no sirve con Torrents, los paquetes de Internet se dividen en TCP y UDP, los torrents también utilizan UDP; como si fuera poco Tor bloquea las conecciones a redes P2P. </p>
 <p>Lo puse a prueba esto porque se que es nuestro instinto natural la curiosidad, en Whonix instalé un cliente de torrents y traté de comenzar una descarga, entonces analicé el tráfico, sorprendentemente las conecciones de P2P estaban congeladas, exactamente igual a cuando uso mi Firewall para bloquear una IP.</p>
-<p> Para descargar Torrents si es necesario tener un VPN confiable. Algo que no menciono es que los VPNs pueden ser dificiles de configurar, y a veces realmente necesitas Tor y no puedes confiar en un VPN, o bien si no estás en tu propio PC y necesitas descargar anónimamente algo. No digo que sea seguro, pero podrías intentar esto:</p>
- <p> Utilizando TOr, renta un VPS en una página web que acepta Bitcoins, por ejemplo esta que encontré a muy buen precio:
-   
-<p><a href="https://clientarea.ramnode.com/cart.php?a=confproduct&i=0">https://clientarea.ramnode.com/cart.php?a=confproduct&i=0</a></p>
+<p> Para descargar Torrents si es necesario tener un VPN confiable. </p>
 
-<p>Y siempre, y absolutamente siempre todo lo relacionado con tu VPS lo harás con Tor, es más no sólo con Tor, deberás de usar Tails, Whonix, BSD o Qubes OS.</p>
-<p>Con tu VPS descargarías los Torrents en tu VPS, y ya luego los descargarías directamente con Tor</p>
+<b>Trackers privados y trackers publicos</b>
+
+<p>En Estados Unidos y en algunos países de Europa se recibe una notificación si se detecta que descargaste contenido con Copyright, pero me comentaron que mientras que muchos sitios exageron esto hablando de usar Proxys Socks y VPN, debemos conocer a los trackers privados. Son trackers reservados donde a veces se requiere una invitación especial o una entrevista.
+Se toma en cuenta la relación entre lo descargado y lo subido, de esta forma se asegura una increíble calidad y además estos trackers son más seguros que los tradicionales como Piratebay</p>
+
+<p>Creo que hay que ser astutos como un Zorro para encontrarlos. </p>
+</p>
 
 
 <h2>Mi resolución</h2>
@@ -337,7 +339,8 @@ Esta pregunta no es la misma que la de usar Tor para todo. ¿Recuerdas que puede
 <li>Icecat + VPN + hardening : El resto de páginas web poco confiables.</li>
 
 <p>En el segundo punto para que tus amigos no te descubran usa un túnel SSH especial a un país que no sea sospechoso y puedes maquillar un poco el user agent cuando los visites.</p>
-<p>En estos 3 puntos hay que hacer un sacrificio importante si veías videos online de ciertas páginas de series o de anime, porque deshabilitan cierta funcionalidad multimedia por ser peligrosa, en este caso mi sugerencia es que vuelvas a los Torrents, entra en thepiratebay con su dirección onion: https://3g2upl4pq6kufc4m.onion/ y suple tus necesidades. La última opción es que en vez de usar Icecat uses Firefox.</p>
+<p>En estos 3 puntos hay que hacer un sacrificio importante si veías videos online de ciertas páginas de series o de anime, porque deshabilitan cierta funcionalidad multimedia por ser peligrosa, en este caso mi sugerencia es que vuelvas a los Torrents.</p>
+<p>La última opción es que en vez de usar Icecat uses Firefox.</p>
 <p>El hardening serán contra técnicas de Hash Canvas, cambio automático de User Agent, Request Headers, lenguaje y hardening de privacidad en general.</p>
 
 <p>PD: Tu mayor enemigo no es la NSA, a pesar de que crea que la NSA no tiene ningún derecho de que haga lo que hace; si te crees que tu único y principal enemigo es la NSA vas a cometer errores de seguridad contra cosas más importantes<p>
