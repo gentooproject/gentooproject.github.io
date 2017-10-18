@@ -348,12 +348,21 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <p>En las variable de Swap remplaza el valor a cero:<p>
 <code>SWAP_SIZE=[ 0 ]</code>
   
- <p>En la variable de Root pon el tamaño que crees en Megabytes (sin ponerle la unidad) que puede soportar tu memoria RAM; esto por lo general debería ser el total de tu memoria RAM dividido entre el número de máquinas virtuales, si la división da menor que 1GB debes tener mucho cuidado al utilizar este método o borrar máquinas virtuales.</p>
-<code>ROOT_SIZE=2000</code>
+ <p>En la variable de Root pon el tamaño que crees en Megabytes (sin ponerle la unidad) que puede soportar tu memoria RAM; esto por lo general debería ser el total de tu memoria RAM dividido entre el número de máquinas virtuales dividido entre dos, si tienes 4GB o menos no deberías usar este metodo, usalo si tienes de 6GB en adelante.</p>
+<code>ROOT_SIZE=1000</code>
  
 <p>Con este paso hemos logrado que la cache, y las operaciones temporales de escritura se hagan en la memoria RAM, y no en el disco duro, aumentando considerablemente la vida de nuestros SSDs.</p>
 
 <p><b>Segundo paso</b><p>
+<p>Habilita el reinicio mágico con REISUB agregando  a /etc/sysctl.conf esto:</p>
+  <code>kernel.sysrq=1</code>
+
+<p>Porque al usar tanta RAM, si no tienes Swap, o si tu Swap se llena o no puede con la demanda, se te va a congelar el PC, y con esta convinación mágica puedes desbloquear o reniciar de forma segura Qubes OS</p>
+
+<p>También agrega tanta RAM como puedas a /dev/shm en /etc/fstab, por default Qubes OS sólo te va a dejar utilizar la mitad de tu memoria RAM, utilizar más de la mitad de la memoria RAM se lo recomiendo sólo a los que tengan 8GB de RAM en adelante.</p>
+
+
+<p><b>Tercer paso</b><p>
   
 <p> Agregar este código después de la segunda línea en /etc/qubes/storage.conf</p>
 <code>[foo]</code></br>
@@ -365,7 +374,7 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <p>Con este paso hemos logrado indicarle a Qubes OS que incluya y cree directorios temporales (en memoria RAM). Este paso es opcional si se desean crear qubes que perduren durante todo el tiempo que dure prendido el PC.</p>
 
-<p><b>Tercer paso</b><p>
+<p><b>Cuarto paso</b><p>
   
 <p>crear el archivo ~/.config/autostart/disposable.desktop con el siguiente contenido:</p>
 <code>[Desktop Entry]</code></br>
