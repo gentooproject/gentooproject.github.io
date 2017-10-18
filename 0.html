@@ -341,7 +341,7 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 
 <code>a=$(date +%s)</code></br>
-<code>[ ! -f "$FILENAME" ] || rm "$FILENAME"</code></br>
+<code>[ ! -e "$FILENAME" ] || rm "$FILENAME"</code></br>
 <code>ln -s /dev/shm/$a "$FILENAME"</code>
 <code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code></br>
 
