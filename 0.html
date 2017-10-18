@@ -342,10 +342,15 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <code>a=$(date +%s)</code></br>
 <code>[ ! -f "$FILENAME" ] || rm "$FILENAME"</code></br>
-<code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code></br>
 <code>ln -s /dev/shm/$a "$FILENAME"</code>
+<code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code></br>
 
-
+<p>En las variable de Swap remplaza el valor a cero:<p>
+<code>SWAP_SIZE=[ 0 ]</code>
+  
+ <p>En la variable de Root pon el tamaño que crees en Megabytes (sin ponerle la unidad) que puede soportar tu memoria RAM; esto por lo general debería ser el total de tu memoria RAM dividido entre el número de máquinas virtuales, si la división da menor que 1GB debes tener mucho cuidado al utilizar este método o borrar máquinas virtuales.</p>
+<code>ROOT_SIZE=2000</code>
+ 
 <p>Con este paso hemos logrado que la cache, y las operaciones temporales de escritura se hagan en la memoria RAM, y no en el disco duro, aumentando considerablemente la vida de nuestros SSDs.</p>
 
 <p><b>Segundo paso</b><p>
