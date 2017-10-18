@@ -342,7 +342,7 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <code>a=$(date +%s)</code></br>
 <code>[ ! -e "$FILENAME" ] || rm "$FILENAME"</code></br>
-<code>ln -s /dev/shm/$a "$FILENAME"</code>
+<code>ln -s /dev/shm/$a "$FILENAME"</code></br>
 <code>truncate -s ${TOTAL_SIZE}M /dev/shm/$a</code></br>
 
 <p>En las variable de Swap remplaza el valor a cero:<p>
