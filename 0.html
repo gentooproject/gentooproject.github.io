@@ -366,10 +366,8 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
   
  <p>En el dom0 deberíamos evitar hacer modificaciones inecesarias, pero no debe haber problema con cambiar también los permisos ahí<p>
 
-<h2>Firewall + Disposable Machine en RAMDisk + Túnel SSH + Bloqueo de URLs</h2>
-
 <h3>No configures la hora de tu computadora con la hora real</h3>
-<p>Te pueden espiar si haces esto, revelandoles donde vives por medio de tu huso horario, lo mejor que puedes hacer es instalar Qubes OS con XFCE, porque mientras todo tu sistema esté engañado para tener otro huso horario, con el applet de XFCE puedes seguir viendo la hora local de donde vives sin que esta información se filtre.</p>
+<p>Te pueden espiar si haces esto, revelándoles donde vives por medio de tu huso horario, lo mejor que puedes hacer es instalar Qubes OS con XFCE, porque mientras todo tu sistema esté engañado para tener otro huso horario, con el applet de XFCE puedes seguir viendo la hora local de donde vives sin que esta información se filtre. Recuerda que tu hora real sólo es visible desde dom0. Así que si un atacante llegara a interceptar tu hora local que usas en el Applet de XFCE, pues quiere decir que te arruinó todo tu PC, y tus máquinas virtuales. En otras palabras es tan efectivo que tiene que ocurrirte el peor de los escenarios que es bastante improbable.</p>
 
 <h3>Una máquina virtual por página web</h3>
 
@@ -463,6 +461,9 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 
 <h3> Crear perfiles y reglas por cada página web</h3>
 <p>En este punto nada puede entrar ni salir fuera de la conección SSH que hemos indicado en el firewall, si bien ahora nuestro atacante está confinado dentro del túnel SSH y tratar de cargar algo fuera del túnel le será negado por el firewall, todo debe arreglarse dentro del túnel.</p>
+
+
+<h3>Firewall + Disposable Machine RAMDisk + Túnel SSH + Bloqueo de URLs</h3>
 
 <p> Vamos a instalar Foxy Proxy Standard (si no lo tienen instalado), de esta manera vamos a bloquear todas las conecciones a las páginas web en excepción de las aprovadas. Una página web normalmente de conecta a varios servidores de terceros  como Google, o un servicio en la  nube, por medio del análisis de tráfico debes descomponer en sus elementos el tráfico de cada sitio web que visites. Y agregar cada conección individual al perfil.</p>
 
