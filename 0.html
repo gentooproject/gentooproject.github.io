@@ -517,8 +517,16 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
   <li>Agregar los flags de no exec a /tmp/, /usr/tmp y /home</li>
   
   <p>De esta forma, en teoría, el atacante no tiene forma alguna de executar código alguno, todo su hackeo deberá realizarlo en memoria. </p>
+  
+  <h3>Consola</h3>
+  <p>Crea un archivo en /etc/profile.d/verbose.sh en tus plantillas y agrega lo siguiente:</p> 
+  
+<code>#! /bin/bash</code></br>
+<code>set -xv</code></br>
+<code>shopt -u -o history</code>
+   
+<p>De esta forma cualquier comando y script te va a dar información más detallada de lo que está haciendo, y de va a desactivar el historial de comandos</p>
 </ol>
-<p>Quizá si habilitamos SELINUX, podríamos torturar más a nuestro atacante, pero hay un problema, SELINUX está desarrollado por la NSA, ¿será posible utitlizarlo para defenderse de la NSA? Me temo que aunque es muy bueno, la NSA es quien lo comprende y domina mejor que nadie.</p>
 
 <h1>VIII. Comprar un router que no te espie</h1>
 
