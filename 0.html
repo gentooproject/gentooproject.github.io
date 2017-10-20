@@ -524,6 +524,10 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <code>#! /bin/bash</code></br>
 <code>set -xv</code></br>
 <code>shopt -u -o history</code>
+
+<p>Finalmente dale permisos de ejecución: </p>
+  
+  <code>chmod +x /etc/profile.d/verbose.sh</code>
    
 <p>De esta forma cualquier comando y script te va a dar información más detallada de lo que está haciendo, y de va a desactivar el historial de comandos</p>
 </ol>
