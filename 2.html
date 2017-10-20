@@ -1,0 +1,40 @@
+<html>
+<p><strong>Sabías que?</strong> puedes ahorrarte algunas extensiones  usando Privoxy, por ejemplo:</p>
+<p>Este código de Privoxy en  user.action debería servir para redirigir todos los sitios http a https:</p>
+<p><code>{ +redirect{<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1b281a9b5b5b1">[email&#160;protected]</a>://@https://@} }<br />
+/<br />
+</code></p>
+<h1>Extensiones:</h1>
+<h2>1. Https Everywhere</h2>
+<p>Esta es una de las extensiones más conocidas, desarrollada por el Tor Project e incluida en el mismísimo Tor Browser. No te puede faltar. Puedes aumentar aun más la seguridad bloqueando los sitios que no utilicen HTTPS en la opción de bloquear solicitudes sin encriptar.</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/">https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/</a></p>
+<h2 class="addon">2. NoScript Security Suite</h2>
+<p>Esta es la otra extensión incluida en el Tor Browser, considerada como indispensable, pues al bloquear Javascript aumenta considerablemente la seguridad y se protege mucho tu privacidad, porque al ejecutar Javascripts se libera información sobre tu computadora y sistema. Sin embargo, vale la pena mencionar que Tor no la habilita por defecto, porque al bloquear javascript, otros sitios pueden identificarte en base a los sitios que bloqueaste.</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=search">https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=search</a></p>
+<h2>3. Privacy Badger</h2>
+<p>Este plugin es proporcionado por Electronic Frontier Foundation (EFF), los cuales han creado un test para determinar si estás protegido de ser identificado en base a la huella digital que deja tu explorador web: <a href="https://panopticlick.eff.org/">https://panopticlick.eff.org/</a></p>
+<p>Bloquea rastreadores ocultos; sin emabargo, no está incluido en el Tor Browser debido a que algunas páginas pueden averiguar que rastreadores están bloqueados, toma en cuenta que Privacy Badger va creando una lista de bloqueo conforme lo usas. La razón por la que Tor no lo incluye es por que la seguridad por medio Tor consiste en que todos parezcan iguales.</p>
+<p>Cuando usas Tor  debes mentalizarte que en efecto, los sitios que visites te va a identificar como un usuario de Tor, pero pasa que otro millón de personas también usan Tor. Así que si bien saben que usas Tor, no lograrán distinguirte entre el otro millón de personas. Usar  Tor Browser recuerda al episodio de Los Padrinos Mágicos donde Timmy deseó que todos fueran iguales; usar Privacy Badger en Tor sería una forma de resaltar como cuando Timmy uso su gorra rosa para que sus padrinos lo encontraran.</p>
+<p><img class="aligncenter size-full wp-image-1535" src="https://gentoo.curl.pink/wp-content/uploads/2017/09/Titlecard-The_Same_Game.jpg" alt="" width="576" height="417" srcset="https://pinkhat.rpm.li/wp-content/uploads/2017/09/Titlecard-The_Same_Game.jpg 576w, https://pinkhat.rpm.li/wp-content/uploads/2017/09/Titlecard-The_Same_Game-300x217.jpg 300w, https://pinkhat.rpm.li/wp-content/uploads/2017/09/Titlecard-The_Same_Game-414x300.jpg 414w" sizes="(max-width: 576px) 100vw, 576px" /></p>
+<p>Mientras que el enfoque de Tor es confundir, el enfoque de EFF está más en exponer lo menos posible tu información. Si quieres aprender sobre el finguerprinting y como protegerte de él, lee por favor:</p>
+<blockquote data-secret="HGbhLGPNhm" class="wp-embedded-content"><p><a href="https://lignux.com/hardening-de-firefoxiceweasel-y-tecnicas-de-ofuscacion-de-fingerprint/">Hardening de Firefox/Iceweasel y técnicas de ofuscación de fingerprint</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://lignux.com/hardening-de-firefoxiceweasel-y-tecnicas-de-ofuscacion-de-fingerprint/embed/#?secret=HGbhLGPNhm" data-secret="HGbhLGPNhm" width="600" height="338" title="&#8220;Hardening de Firefox/Iceweasel y técnicas de ofuscación de fingerprint&#8221; &#8212; LiGNUx" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/?src=search">https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/?src=search</a></p>
+<h2>4. Ublock origin</h2>
+<p>Este es un bloqueador no comercial a diferencia de AdBlock, y ocupa muy poca memoria y RAM, tiene opciones avanzadas que te permiten aprovecharlo aun mas, por ejemplo puedes bloquear las redes sociales en todos  los sitios y los botones de compartir y seguir. Por la misma razón que privacy Badger no se puede incluir en Tor Browser.</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?src=search">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?src=search</a></p>
+<h2>5. Random Agent Spoofer</h2>
+<p>Es único plugin que he probado que permite falsear el User Agent en el Javascript satisfactoriamente; utiliza un enfoque de seguridad basado en la entropía. Donde cambia el user agent cada tantos minutos. Así como alterar todo tipo de headers, como los de idioma, de formato. Es un plugin demasiado completo  que debería ser más recomendado y utilizado. Vale la pena mencionar que  el test de panopticlick no lo va a considerar seguro para el finguerprinting, pero si lo es. La cuestión es que se basa en otro enfoque.</p>
+<p>Tenemos 3 enfoques para la privacidad: El método de Tor, mantener un perfil bajo (EFF) o,  generar entropía.</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/random-agent-spoofer/?src=ss">https://addons.mozilla.org/en-US/firefox/addon/random-agent-spoofer/?src=ss</a></p>
+<h2>6. Self-Destructing Cookies</h2>
+<p>Elimina las cookies tan pronto las dejes de usar</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/?src=search">https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/?src=search</a></p>
+<h2>7. Lightbeam</h2>
+<p>Te permite analizar que conecciones realizan los sitios que visitas en tiempo real o en el pasado, por medio de gráficos o por listas; también te permite bloquear  las conecciones de sitios de terceros de forma personalizada. De forma que no te espien. Ayuda mucho configurar Ublock de antemano para bloquear redes sociales y Google Analytics de forma que ya no tengas que hacerlo con Lightbeam manualmente.</p>
+<h2>8. Cookie Monster</h2>
+<p>Esta extensión fue eliminada recientemente de la tienda de Firefox por su autor. Permitía bloquear todas las cookies de todos los sitios y permitir sólo la de los sitios de nuestra preferencia. A pesar de que fue eliminada, la subí a mi repositorio para vuestro uso:</p>
+<p><a href="https://repo.curl.pink/files/">https://repo.curl.pink/files/</a></p>
+<p>Esta extensión dejará de servir cuando firefox libere la versión 57 que será no en mucho tiempo, si de verdad te interesa esta utilísima versión instala Firefox ESR que es un firefox que se enfoca sólo en una versión estable. De esta forma podrás seguir utilizando esta extensión un poco más de tiempo.</p>
+<p>El desarrollador dijo que dejó de darle soporte porque en esa futura versión ya mencionada firefox va a remover el soporte de las extensiones XUL. Más información sobre esta desición de Mozilla abajo (en inglés):</p>
+</html>
