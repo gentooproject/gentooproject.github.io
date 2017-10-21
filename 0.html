@@ -499,6 +499,9 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <code>fi</code></br>
 </br>
 <code>qvm-shutdown --force Whonix</code></br>
+<code>while [  $(qvm-ls | grep Running | grep Whonix) ]; do</code></br>
+<code>sleep 1</code></br>
+<code>done</code></br>
 <code>qvm-remove Whonix</code></br>
 <code>qvm-create -Pfoo Whonix --label $colour --template whonix-ws</code></br>
 <code>qvm-start sys-whonix #Remover si no usas Whonix </code></br>
