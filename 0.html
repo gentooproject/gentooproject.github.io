@@ -465,6 +465,43 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <code>Terminal=false</code></br>
 <code>Hidden=false</code></br>
 
+<h3>Máquina virtual autodestruible</h3>
+<p>Parecido al concepto de Disposable Virtual Machine, este método lo implementé en Qubes OS con un script, el problema es que Qubes OS tiene una limitación de una DVM porque su utilización se supone que es para casos especiales de mucho riesgo, y como puedes ver en mi estrategia lo estoy implementando para todo.</p>
+
+<p>Pero la diferencia principal es que esta máquina virtual se autodestruye en el tiempo especificado, a diferencia de la Disposable Virtual Machine, porque con el DVM podrías tener abierto un programa durante 2 semanas seguidas, y no se destruiría esa máquina virtual porque aun tienes abierto el mismo programa</p> 
+
+<p>Pero con mi técnica de MVA la principal ventaja es que durante una hora puedes abrir libremente todas las aplicaciones que quieras -a diferencia de la Disposable Virtual Machine- y hacer el trabajo que quieras, y entonces a la hora se te apagará y se autodestruirá sóla.</p>
+
+<p>Y si sigues mi método de arriba de RAMDisk, aquí es donde el tercer paso cobra importancia, porque todo esto se hará en la memoria RAM, de forma que no quedará ningún rastro en absoluto de lo que hiciste en esa hora, incluso si te hackearon en esa hora, vas a perder el hackeo.</p>
+
+<code>set -xv</code></br>
+<code>array[0]="red"</code></br>
+<code>array[1]="orange"</code></br>
+<code>array[2]="blue"</code></br>
+<code>array[3]="green"</code></br>
+<code>array[4]="yellow"</code></br>
+</br>
+<code>function indices {</code></br>
+<code>  size=${#array[@]}</code></br>
+<code>  index=$(($RANDOM % $size))</code></br>
+<code>  colour=${array[$index]}</code></br>
+<code>  }</code></br>
+<code>indices</code></br>
+<code>echo $colour > /dev/shm/coulour</code></br>
+<code>if [ ! "$colour" == "$(cat /dev/shm/colour)" ]; then</code></br>
+<code>until [ ! "$colour" == "$(cat /dev/shm/colour)" ]; do</code></br>
+<code>indices</code></br>
+<code>echo $colour > /dev/shm/colour</code></br>
+<code>done</code></br>
+<code>fi</code></br>
+</br>
+<code>qvm-run Whonix 'systemctl poweroff'</code></br>
+<code>qvm-remove Whonix</code></br>
+<code>qvm-create -Pfoo Whonix --label $colour --template whonix-ws</code></br>
+<code>qvm-prefs Whonix --set netvm sys-whonix</code></br>
+<code>qvm-run --pass-io sys-whonix "sudo service tor@default restart"</code>
+
+
 <h2>Firewall</h2>
 <p>Qubes OS separa en sistemas operativos aislados varias partes de un sistema operativo de la siguiente forma:
   
