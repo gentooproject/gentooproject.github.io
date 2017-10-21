@@ -447,7 +447,7 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <code>dir_path=/tmp/1</code>
 
 <p>Y crea un archivo en /etc/tmpfiles.d/1.conf con el siguiente contenido:</p>
-<code>d  /tmp/1  0770  qubes</code>
+<code>d  /tmp/1  0770 1000 qubes</code>
 
 <p>Con este paso hemos logrado indicarle a Qubes OS que incluya y cree directorios temporales (en memoria RAM). Este paso es opcional si se desean crear qubes que perduren durante todo el tiempo que dure prendido el PC.</p>
 
