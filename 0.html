@@ -498,9 +498,10 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <code>done</code></br>
 <code>fi</code></br>
 </br>
-<code>qvm-run Whonix 'systemctl poweroff'</code></br>
+<code>qvm-shutdown --force Whonix</code></br>
 <code>qvm-remove Whonix</code></br>
 <code>qvm-create -Pfoo Whonix --label $colour --template whonix-ws</code></br>
+<code>qvm-start sys-whonix #Remover si no usas Whonix </code></br>
 <code>qvm-prefs Whonix --set netvm sys-whonix</code></br>
 <code>qvm-run --pass-io sys-whonix "sudo service tor@default restart" #Remover si no usas Whonix </code>
 
