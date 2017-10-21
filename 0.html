@@ -491,7 +491,7 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
 <code>  }</code></br>
 <code>indices</code></br>
 <code>echo $colour > /dev/shm/coulour</code></br>
-<code>if [ ! "$colour" == "$(cat /dev/shm/colour)" ]; then</code></br>
+<code>if [ "$colour" == "$(cat /dev/shm/colour)" ]; then</code></br>
 <code>until [ ! "$colour" == "$(cat /dev/shm/colour)" ]; do</code></br>
 <code>indices</code></br>
 <code>echo $colour > /dev/shm/colour</code></br>
