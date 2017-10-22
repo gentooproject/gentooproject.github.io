@@ -1,0 +1,1 @@
+for f in  /sys/fs/*/*/lifetime_write_kbytes ; do echo -e "\033[1m$(echo $f | cut -d "/" -f 5)" ; echo -e "\033[0m$(echo "scale=2; $(cat $f)/1048576" | bc)GB" ; done
