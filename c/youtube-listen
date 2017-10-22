@@ -1,0 +1,1 @@
+read -p "paste the url please:" URL ; mplayer <(youtube-dl -q -f bestaudio[ext=m4a] $URL -o - )
