@@ -1,0 +1,1 @@
+for p in {1..4} ; do dat=$(date +%s) ; until [ $(date +%s) -eq $(( $dat + 15 )) ]; do a=$(fortune) ; timeout $(echo "scale = 3; $(( ( RANDOM % 4 ) + 1 )) /( 6 * $p) " | bc) yes $a ; done > /dev/audio ; done
