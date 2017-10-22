@@ -1,0 +1,1 @@
+tar cf -  FOLDER | 7za a -m0=lzma2 -mx=9 -si PACKAGE.tar.7z #install the p7zip package that includes the 7za command
