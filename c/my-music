@@ -1,0 +1,103 @@
+#! /bin/bash
+
+if [[ ! -f /usr/bin/play && ! -f /usr/local/bin/play ]]; then
+ cat << EOF
+	this shall not work until you install the sox package:
+Ubuntu:   sudo apt-get install sox
+Debian:   sudo apt-get install sox
+OpenSUSE: sudo zypper install sox 
+Fedora:	  sudo dnf install sox
+Arch:	  sudo pacman -S sox
+Gentoo:	  sudo emerge sox
+FreeBSD:  sudo pkg install sox
+EOF
+exit 127
+fi
+
+export aa=$(echo $1)
+
+function codenames {
+cat << EOF
+nwxhVeiD zfWPjhyw H4z2ySRX
+Vx1i8ZiK KRv4nMj2 Uvdp886s 
+vTV0UFuT suBjP6GY
+UrXLkNye CaAAGzaU
+9gg63tur pqLwfdVF
+QN31pf3a 4GjAH95r
+EOF
+}
+
+function names {
+cat << EOF
+1. Modokashii Sekai No Ue De 
+2. Super Driver
+3. First Good-bye
+4. Lost my Music
+5. Vanilla Salt
+6. Rottara Rottara 
+EOF
+}
+
+function playplay {
+
+	#export addr=104.20.208.21
+	export number=$(codenames | wc -l )
+
+	i=1
+	
+	while [ "$i" -le "$number" ]; do
+	line=$( codenames | head -$i | tail -1 )
+	title=$( names | head -$i | tail -1 )
+	urls=$(for p in $line; do echo http://pastebin.com/raw/$p ; done)
+
+	echo $(tput bold) "$title" $(tput sgr0) 
+	curl -s $urls | base64 -d | /usr/bin/play -t ogg -
+	i=$(($i + 1))
+	done
+}
+
+function download {
+
+	line=$( codenames | head -$aa | tail -1 )
+        title=$( names | head -$aa | tail -1 )
+        urls=$(for p in $line; do echo http://pastebin.com/raw/$p ; done)
+        for p in $urls; do wget "$p" ; done
+	(cat $line | base64 -d ) > "$title.ogg"
+	rm $line
+
+}
+
+function helpy {
+	cat << EOF
+
+******** INTRODUCTION ****************
+This script is for music streaming through pastebin.com , just run it with any parameter to start playing the default playlist.
+If you like to download a song from the playlist just include the number of track as argument of the script. Example:
+
+      $ streampaster 2 
+
+This will download the Super Driver song in the current directory.
+You can upload your own music in pastebin and edit this script for playing your custom music, however sucessfully uploading music and large files  requires of a Pro Account in Pastebin. Even though  you easily can edit this script in order to make it work with another Paste services.
+
+To upload music in pastebin you must parse and split it in the following way:
+base64 -w 0 SONG > SONG.64
+split --bytes 10000k SONG.64
+
+*********EDITING THE PLAYLIST********
+In order to add your custom song you must edit two functions in this script: function name, and function codename
+In the function codename you have to add per line the code snippet of the URL, for example if the pastebin url is pastebin.com/adsfgh, then you have to add only adsfgh to the codename function, if the song is splited in several parts just add all the codes in the same line.
+Be sure that the function name list matches the function codename list. 
+The function name list is a list of the Titles of the songs in order to mantain it sorted.
+
+EOF
+}
+
+case $1 in
+    ''|*[!0-9]*) 
+	    if [[ "$1" = "-h" || "$1" = "-help" || "$1" = "--help" ]] ; then
+		   helpy
+	    else
+		   playplay 
+	    fi ;;
+    *) download ;;
+esac
