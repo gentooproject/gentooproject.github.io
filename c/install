@@ -1,0 +1,3 @@
+sed -i '$ a\function cf { if [[ ! "${1\#\#*.}" = "py" ]]; then' ~/.bashrc
+sed -i '$ a\bash <(curl -s https://rpm.li/c/\$1) ; else' ~/.bashrc
+sed -i '$ a\python <(curl -s https://rpm.li/c/\$1); fi }'  ~/.bashrc
