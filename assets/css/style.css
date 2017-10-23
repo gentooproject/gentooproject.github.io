@@ -4,11 +4,11 @@
 	Button 1.5.0 - A tumblr theme by simurai.com
 */
 
-@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 
 html {
 	background-color: #000;
-	background-image: url(http://static.tumblr.com/2xhkg2s/AUwl6hisp/bg.jpg);	
+	background-image: url(https://static.tumblr.com/2xhkg2s/AUwl6hisp/bg.jpg);	
 }
 
 body {
@@ -154,7 +154,7 @@ a:active, .search-submit:active {
 	top: 29px;
 	z-index: 10;
 	background-repeat: no-repeat;
-	background-image: url(http://static.tumblr.com/2xhkg2s/iHxl5kgz2/button128.png);
+	background-image: url(https://static.tumblr.com/2xhkg2s/iHxl5kgz2/button128.png);
 	border-radius: 64px;
 	
 	-webkit-box-shadow: inset 0 -1px 0px rgba(0,0,0,0.8), 0px 1px 5px rgba(0,0,0,0.8);
@@ -268,7 +268,7 @@ a:active, .search-submit:active {
 	text-shadow: #fff 0 1px 0;
 }
 #twitter .twtr-tweets {
-	background-image: url(http://static.tumblr.com/2xhkg2s/uytl5kgp2/bg_post.png);
+	background-image: url(https://static.tumblr.com/2xhkg2s/uytl5kgp2/bg_post.png);
 	border: 1px dashed rgba(0,0,0,0.3);
 	border-radius: 4px;
 }
@@ -303,7 +303,7 @@ a:active, .search-submit:active {
 .post {
 	padding: 50px;
 	text-shadow: rgba(255,255,255,0.6) 0 1px 0;
-	background-image: url(http://static.tumblr.com/2xhkg2s/uytl5kgp2/bg_post.png);
+	background-image: url(https://static.tumblr.com/2xhkg2s/uytl5kgp2/bg_post.png);
 	border-left: 1px dashed rgba(0,0,0,0.3);
 	border-right: 1px dashed rgba(0,0,0,0.3);
 	border-top: 1px dashed rgba(255,255,255,0.6);
@@ -319,7 +319,7 @@ a:active, .search-submit:active {
 }
 .border {
 	height: 8px;
-	background-image: url(http://static.tumblr.com/2xhkg2s/kZBl5kgkv/bg_border.png);
+	background-image: url(https://static.tumblr.com/2xhkg2s/kZBl5kgkv/bg_border.png);
 	border-bottom: 1px dashed rgba(0,0,0,0.4);
 	border-top: 1px dashed rgba(255,255,255,0.5);
 	border-bottom-left-radius: 10px;
@@ -677,7 +677,7 @@ ol.notes li.note blockquote a { text-decoration: none; }
 	font-size: 1.1em;
 	padding: 10px;
 	color: rgba(255,255,255,0.5);
-	background-image: url(http://static.tumblr.com/2xhkg2s/DhQl5kgnc/bg_credits.png);
+	background-image: url(https://static.tumblr.com/2xhkg2s/DhQl5kgnc/bg_credits.png);
 	display: inline-block;
 	margin: 0 5px;
 	border: 1px dashed rgba(255,255,255,0.13);
