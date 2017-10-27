@@ -55,7 +55,6 @@
                             
 <h1 style="text-align:center">Mi estrategia de seguridad</h1>
 
-<p>¿Nunca has pensado que es lo que hace Snowden? ¿No sería divertido? </p>
 
 <p>Hace unos meses le pregunté a alguien que si sólo con nuestra ip se nos puede hackear, y me contestó que en realidad la ip no sirve de mucho, para obtener la ip basta con mandar un link. De hecho hay páginas que sirven para eso, te permiten subir una imagen y te muestran la IP de todos los que la visiten:</p>
 
@@ -339,13 +338,7 @@ http://revolucao.etc.br/archives/seguranca-o-que-e-vpn-segura/
 <li>Al apagar tu PC, el Rasberry Pi debe simular actividad en tus tres redes de doble VPN. La VPN que va a trabajar con Tor debe hacerlo dentro de la deep web, el problema sería crear un algoritmo, si no somos científicos de la computación o matemáticos, puede que fallemos en este punto. </li>
 </ol>
 
-<p>Lamentablemente lograr un nivel de privacidad capaz de atacar las bases en las que opera la NSA es bastante costosa y nada amigable con el ambiente, en este método compramos 4 adaptadores de red, una fuente continua de energía, un rasberry pi, contratamos a 4 provedores diferentes de VPN, y además contratamos sus planes más caros, no nos sirven los planes económicos para esta estrategia.</p>
-
-<p>¿Por que la NSA tiene que espiar al mundo?</p>
-
-<p>El señor Wiston le preguntó a O'Brien que porque hacían todo esto. El agente sonrió y le dijo que era muy simple, todo es por poder"</p>
-
-</hr>
+<p>En este método compramos 4 adaptadores de red, una fuente continua de energía, un rasberry pi, contratamos a 4 provedores diferentes de VPN, y además contratamos sus planes más caros, no nos sirven los planes económicos para esta estrategia.</p>
 
 <h2>V. Wikipedia Offline</h2>
 <p>Dicen que la computadora más segura es aquella que no está conectada al Internet, de esta forma puedes estar tranquilo de que absolutamente nadie va a saber lo que estés consultando<p>
@@ -414,15 +407,13 @@ Esta pregunta no es la misma que la de usar Tor para todo. ¿Recuerdas que puede
 
 <p>El hardening serán contra técnicas de Hash Canvas, cambio automático de User Agent, Request Headers, lenguaje y hardening de privacidad en general.</p>
 
-<p>PD: Tu mayor enemigo no es la NSA, a pesar de que crea que la NSA no tiene ningún derecho de que haga lo que hace; si te crees que tu único y principal enemigo es la NSA vas a cometer errores de seguridad contra cosas más importantes<p>
-
 <h1>VII. La navegación web más segura del mundo: Hardening de Qubes OS</h1>
 
 <p>A partir de este punto, el hardening de la seguridad va a comenzar, y se aplicará todo lo visto hasta el momento más el nuevo contenido de este tema.</p>
 <p>El punto débil de Qubes son los bugs de Xen, pero actualmente los bugs de Xen son contados con una sóla mano, sin embargo, si quisieras perfección, en vez de máquinas virtuales, puedes comprar distintas computadoras con el mismo hardware y a cada una le instalas Qubes OS, ya es cuestión de como configures el router para que no tengan acceso a la red local.</br>
 Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a correr sólo una máquina virtual. Sucede que puedes trabajar con un sistema de sólo lectura gracias a Qubes Os y que al cerrar la aplicación se pierdan los cambios. Mucho más dinámico, rápido y seguro que Tails. Y además proteges tu BIOS y tu Hardware. Es la ventaja de Qubes OS, al usar Xen podemos aislar y abstraer el hardware.</p>
 
-<p>Mencionando el método hipotético en los que usamos 4 VPN y un rasberry pi, en vez de tener 3 tarjetas de red en tu computadora, puedes tener varias computadoras. Está combinación de Qubes OS con el uso de varias computadoras con una IP distinta cada una. Sin dudas nos da una seguridad y una privacidad sin precedentes, a pesar de eso, este tema acaba de empezar y podemos mejorar aun más la seguridad y la privacidad</p>
+<p>Mencionando el método hipotético en los que usamos 4 VPN y un Rasberry Pi, en vez de tener 3 tarjetas de red en tu computadora, puedes tener varias computadoras. Está combinación de Qubes OS con el uso de varias computadoras con una IP distinta cada una. Sin dudas nos da una seguridad y una privacidad sin precedentes, a pesar de eso, este tema acaba de empezar y podemos mejorar aun más la seguridad y la privacidad</p>
 <p>Por cierto, vale la pena mencionar que hay una utilidad que te permite usar el mismo monitor, teclado y mouse con distintos PCs. Así sólo gastarías en el gabinete, por cierto, puedes comprar microcomputadoras que caben en tu bolsillo que son de 64 bits y que cuentan con un almacenamiento de 32GB . Puedes comprar de ese tipo, no sale tan caro y no te gastan tanta electricidad.
 
 <h3>Cambiar el permiso de la carpeta home del usuario a 700</h3>
@@ -434,7 +425,11 @@ Y quizá te preguntes que sentido tiene instalarles Qubes Os si cada una va a co
  <p>En el dom0 deberíamos evitar hacer modificaciones inecesarias, pero no debe haber problema con cambiar también los permisos ahí<p>
 
 <h3>No configures la hora de tu computadora con la hora real</h3>
-<p>Te pueden espiar si haces esto, revelándoles donde vives por medio de tu huso horario, lo mejor que puedes hacer es instalar Qubes OS con XFCE, porque mientras todo tu sistema esté engañado para tener otro huso horario, con el applet de XFCE puedes seguir viendo la hora local de donde vives sin que esta información se filtre. Recuerda que tu hora real sólo es visible desde dom0. Así que si un atacante llegara a interceptar tu hora local que usas en el Applet de XFCE, pues quiere decir que te arruinó todo tu PC, y tus máquinas virtuales. En otras palabras es tan efectivo que tiene que ocurrirte el peor de los escenarios que es bastante improbable.</p>
+<p>Como medida de protección en profundidad, para evitar que tus navegadores web como Google Chrome, Mozilla Firefox y cualquiera capaz de ejecutar javascript puedan obtener tu huso horario, podemos configurar nuestro sistema para que utilice otro huso horario. Especificar otro uso horario es en realidad la solución más sencilla, pues en caso contrario habría que asegurarse que cada aplicación individual está leyendo la variable del sistema.</p>
+  <p>Inclusive es válido para las aplicaciones de mensajería instantanea , por ejemplo, el protocolo Xabber registra tu uso horario y se puede conocer públicamente en ciertos escenarios.</p>
+<p>Demostración, esta página web te indicará el huso horario que detectó por medio de javascript:</p>
+<a href="http://browserspy.dk/date.php">date.php</a>
+  <p>Para esto se sugiere instalar Qubes OS con XFCE, de esta forma puedes especificar otro huso horario mientras puedes visualizar tu hora real. Por tanto en el remoto caso en que un atacante llegara a interceptar tu hora local que usas en el Applet de XFCE, implicaría que encontró un bug en el hipervisor de Xen que le permitió hacerse con el control completo de la computadora.</p>
 
 <h3>Una máquina virtual por página web</h3>
 
