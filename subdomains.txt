@@ -1,0 +1,7 @@
+c.rpm.li
+pinkhat.rpm.li
+gentoo.rpm.li
+*****miscellaneous****
+repo.a.rpm.li
+img.a.rpm.li
+w.rpm.li
