@@ -1,7 +1,8 @@
-1. c.rpm.li -Traditional Link Shortener within a simple blog
-2. y.rpm.li -Display youtube videos with no distractions
-3. blog.rpm.li -Linux and OpenSource blog
-4. gentoo.rpm.li -Gentoo site, installation, tips, practice
+* c.rpm.li -Traditional Link Shortener within a simple blog
+* y.rpm.li -Display youtube videos with no distractions
+* blog.rpm.li -Linux and OpenSource blog
+* gentoo.rpm.li -Gentoo site, installation, tips, practice
+* paste.rpm.li -Pastebin like site
 
 ***miscellaneous:***
 
