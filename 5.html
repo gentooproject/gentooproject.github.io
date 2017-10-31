@@ -30,6 +30,8 @@
 <p>De esta forma ninguna página web va a cargarse, ahora debemos crear otro perfil donde especificaremos las páginas web que queremos permitir y que van a ser las únicas que van a tener permitido cargarse.</p>
 <p>Entonces cerramos la ventana y en la ventana original creamos un nuevo perfil que nos va a abrir una ventana similar al de la caputura pasada, y ahi si no vas a usar un puente SSH marcas usar directamente el internet (no proxy), si lo vas a usar marca el campo de Proxy , selecciona SOCKS 5, escribe la ip local y el puerto en donde se hizo el puente SSH, y seguido entra en URL patterns, ahí es donde debes especificar en forma de patrón las páginas web que piensas permitir, por ejemplo:</p>
 <p>https://google.com/*</p>
+<p>No te olvides agregar el https al principio, de otra forma no va a servir, y apartir de ahora debes escribir directamente el https antes de entrar a los sitios, al menos claro, usen el protocolo inseguro http y los hayas agregado adecuedamente a la lista especificando que son http.</p>
+<p>Entonces así va a quedar el nuevo perfil cuando lo hayas agregado:</p>
 <p><img src="/images/foxy2.jpg"></img></p>
 
   
