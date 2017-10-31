@@ -28,7 +28,8 @@
   <p><img src="/images/foxy1.jpg"></img></p>
 <p>Entonces selecciona: Manual Proxy configuration, y en IP pon 0, y en puerto pon 0.</p>
 <p>De esta forma ninguna página web va a cargarse, ahora debemos crear otro perfil donde especificaremos las páginas web que queremos permitir y que van a ser las únicas que van a tener permitido cargarse.</p>
-<p>Entonces cerramos la ventana y en la ventana original creamos un nuevo perfil así como se ve en la imagen cuando ya está el perfil creado:</p>
+<p>Entonces cerramos la ventana y en la ventana original creamos un nuevo perfil que nos va a abrir una ventana similar al de la caputura pasada, y ahi si no vas a usar un puente SSH marcas usar directamente el internet (no proxy), si lo vas a usar marca el campo de Proxy , selecciona SOCKS 5, escribe la ip local y el puerto en donde se hizo el puente SSH, y seguido entra en URL patterns, ahí es donde debes especificar en forma de patrón las páginas web que piensas permitir, por ejemplo:</p>
+<p>https://google.com/*</p>
 <p><img src="/images/foxy2.jpg"></img></p>
 
   
