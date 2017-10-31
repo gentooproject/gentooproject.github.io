@@ -1,5 +1,6 @@
 <html>
 <h1>Navegar en un internet seguro</h1>
+  <p>El experto en seguridad y en criptografía  Sneiner dijo que la información es un activo tóxico, y que a la información ha de tratarse como se trataría a cualquier cosa tóxica, y no hay aplicación en la que tratamos más información que en el explorador web</p>
   <p>Estas ideas están basadas en el uso de Firefox, para protección más intensa es recomendado lo siguiente:</p>
   <ol>
     <li>Poder conectarse por medio de un túnel SSH a un servidor</li>
@@ -10,21 +11,23 @@
    <p>Al firewall entonces se le aplicará una política de denegar absolutamente todas las ips y puertos, en exepción de una sóla ip que es a donde se habrá de conectar a un túnel SSH. De esta forma, se limita todo a este túnel SSH y limita a muchos tipos de ataque que se conectan a servers remotos. </p>
     
     <hr>
-    
-  <p><b>1. Bloquear Javascript y Iframes</b></p>
+   <p><b>1. Configura tu navegador para siempre usar el módo incognito, y no guardes en el nunca contraseñas.</b></p>
+  <p><b>2. Bloquear Javascript y Iframes</b></p>
   <p>Esto lo puedes conseguir instalando: </p>
   <p><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/">https://addons.mozilla.org/en-US/firefox/addon/noscript</a></p>
-  <p><b>2. Instala Ublock origin</b></p>
+  <p><b>3. Instala Ublock origin</b></p>
   <p>Esto nos va a ayudar a bloquear la publicidad y algunos rastreadores ocultos que sólo te exponen</p>
   <p><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin</a></p>
-  <p><b>3. Instala Certificate Patrol</b></p>
+  <p><b>4. Instala Certificate Patrol</b></p>
   <p>Este es uno de los puntos más vulnerables al navegar por internet, un certificado SSL puede ser falseado sin mucha dificultad, pero para esto existe Certificate Patrol, que nos ayuda a combrobar que el certificado es exactamente el de siempre.</p>
-  <p><b>4. Crear una lista de sitios buenos, y fuera de esa lista ningún sitio web puede cargarse</b></p>
+  <p><b>5. Crear una lista de sitios buenos, y fuera de esa lista ningún sitio web puede cargarse</b></p>
   <p>Este es el punto más paranoico, aunque no se si paranoico sea una buena palabra ya que los hackers cada vez desarrollan nuevas técnicas más avanzadas.</p>
   <p>Para ello primero hay que instalar ProxyFoxy:
   <p><a href="https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/"></a></p>
   <p>Una vez abierto hay que abrir su configuración y darle doble click al perfil default donde se abrirá otra ventana como la siguiente:</p>
   <p><img src="/images/foxy1.jpg"></img></p>
-    
+<p>Entonces selecciona: Manual Proxy configuration, y en IP pon 0, y en puerto pon 0.</p>
+<p>De esta forma ninguna página web va a cargarse, ahora debemos crear otro perfil donde especificaremos las páginas web que queremos permitir y que van a ser las únicas que van a tener permitido cargarse.</p>
+
   
 </html>
