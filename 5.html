@@ -1,6 +1,16 @@
 <html>
 <h1>Navegar en un internet seguro</h1>
-  <p>Estas ideas están basadas en el uso de Firefox
+  <p>Estas ideas están basadas en el uso de Firefox, para protección más intensa es recomendado lo siguiente:</p>
+  <ol>
+    <li>Poder conectarse por medio de un túnel SSH a un servidor</li>
+    <li> Un Firewall dedicado que limite el tráfico</li>
+    <li> Qubes Os o una máquina virtual, en el caso de elegir Qubes OS, Qubes OS ya incluye una máquina virtual que actua como Firewall</li>
+  <ol>
+    
+   <p>Al firewall entonces se le aplicará una política de denegar absolutamente todas las ips y puertos, en exepción de una sóla ip que es a donde se habrá de conectar a un túnel SSH. De esta forma, se limita todo a este punte SSH y limita a muchos tipos de ataque que se conectan a servers remotos. </p>
+    
+    <hr>
+    
   <p><b>1. Bloquear Javascript y Iframes</b></p>
   <p>Esto lo puedes conseguir instalando: </p>
   <p><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/">https://addons.mozilla.org/en-US/firefox/addon/noscript</a></p>
