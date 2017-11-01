@@ -6,6 +6,6 @@
 
 ***miscellaneous:***
 
-* repo.a.rpm.li
-* img.a.rpm.li
-* w.rpm.li
+* repo.misc.rpm.li
+* img.misc.rpm.li
+* ñ.rpm.li
