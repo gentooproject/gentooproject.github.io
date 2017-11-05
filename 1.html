@@ -1,57 +1,143 @@
 <html>
-<h1>Extensiones para aumentar la privacidad</h1>
-<p><strong>Sabías que?</strong> puedes ahorrarte algunas extensiones  usando Privoxy, por ejemplo:</p>
-<p>Este código de Privoxy en  user.action debería servir para redirigir todos los sitios http a https:</p>
-  <p><code>  { +redirect{s@http://@https://@} }</code></br>
+<h1>Extensiones
+ para aumentar la privacidad</h1>
+<p><strong>Sabías que?</strong> puedes ahorrarte 
+algunas extensiones  usando Privoxy, por ejemplo:</p>
+<p>Este código de Privoxy en  user.action debería servir para 
+redirigir todos los sitios http a https:</p>
+  <p><code>  { +redirect{s@http://@https://@} 
+}</code></br>
 <code>/</code>
 </p>
 <h1>Extensiones:</h1>
 <h2>1. Https Everywhere</h2>
-<p>Esta es una de las extensiones más conocidas, desarrollada por el Tor Project e incluida en el mismísimo Tor Browser. No te puede faltar. Puedes aumentar aun más la seguridad bloqueando los sitios que no utilicen HTTPS en la opción de bloquear solicitudes sin encriptar.</p>
-<p><a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/">https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/</a></p>
-<h2 class="addon">2. NoScript Security Suite</h2>
-<p>Esta es la otra extensión incluida en el Tor Browser, considerada como indispensable, pues al bloquear Javascript aumenta considerablemente la seguridad y se protege mucho tu privacidad, porque al ejecutar Javascripts estas expuesto a ataques o además se libera información sobre tu sistema. </p>
-  <p>Es recomendado que configures NoScript ara que también bloqueé Iframes</p>
-<p><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=search">https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=search</a></p>
-<h2>3. Privacy Badger</h2>
-<p>Este plugin es proporcionado por Electronic Frontier Foundation (EFF), los cuales han creado un test para determinar si estás protegido de ser identificado en base a la huella digital que deja tu explorador web: <a href="https://panopticlick.eff.org/">https://panopticlick.eff.org/</a></p>
-<p>Bloquea rastreadores ocultos; sin emabargo, no está incluido en el Tor Browser debido a que algunas páginas pueden averiguar que rastreadores están bloqueados, toma en cuenta que Privacy Badger va creando una lista de bloqueo conforme lo usas. La razón por la que Tor no lo incluye es por que la seguridad por medio Tor consiste en que todos parezcan iguales.</p>
-<p>Cuando usas Tor  debes mentalizarte que en efecto, los sitios que visites te va a identificar como un usuario de Tor, pero pasa que otro millón de personas también usan Tor. Así que si bien saben que usas Tor, no lograrán distinguirte entre el otro millón de personas. 
-<p>Mientras que el enfoque de Tor es confundir, el enfoque de EFF está más en exponer lo menos posible tu información. Si quieres aprender sobre el finguerprinting y como protegerte de él, lee por favor:</p>
-<blockquote data-secret="HGbhLGPNhm" class="wp-embedded-content"><p><a href="https://lignux.com/hardening-de-firefoxiceweasel-y-tecnicas-de-ofuscacion-de-fingerprint/">Hardening de Firefox/Iceweasel y técnicas de ofuscación de fingerprint</a></p></blockquote>
-<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://lignux.com/hardening-de-firefoxiceweasel-y-tecnicas-de-ofuscacion-de-fingerprint/embed/#?secret=HGbhLGPNhm" data-secret="HGbhLGPNhm" width="600" height="338" title="&#8220;Hardening de Firefox/Iceweasel y técnicas de ofuscación de fingerprint&#8221; &#8212; LiGNUx" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<p><a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/?src=search">https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/?src=search</a></p>
-<h2>4. Ublock origin</h2>
-<p>Este es un bloqueador no comercial a diferencia de AdBlock, y ocupa muy poca memoria y RAM, tiene opciones avanzadas que te permiten aprovecharlo aun mas, por ejemplo puedes bloquear las redes sociales en todos  los sitios y los botones de compartir y seguir. Por la misma razón que privacy Badger no se puede incluir en Tor Browser.</p>
-<p><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?src=search">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?src=search</a></p>
-<h2>5. Random Agent Spoofer</h2>
-<p>Es único plugin que he probado que permite falsear el User Agent en el Javascript satisfactoriamente; utiliza un enfoque de seguridad basado en la entropía. Donde cambia el user agent cada tantos minutos. Así como alterar todo tipo de headers, como los de idioma, de formato. Es un plugin demasiado completo  que debería ser más recomendado y utilizado. Vale la pena mencionar que  el test de panopticlick no lo va a considerar seguro para el finguerprinting, pero si lo es. La cuestión es que se basa en otro enfoque.</p>
-<p><a href="https://addons.mozilla.org/en-US/firefox/addon/random-agent-spoofer/?src=ss">https://addons.mozilla.org/en-US/firefox/addon/random-agent-spoofer/?src=ss</a></p>
-<h2>6. Self-Destructing Cookies</h2>
+<p>Esta es una de las extensiones más conocidas, desarrollada por 
+el Tor Project e incluida en el mismísimo Tor Browser. No te puede 
+faltar. Puedes aumentar aun más la seguridad bloqueando los sitios que 
+no utilicen HTTPS en la opción de bloquear solicitudes sin 
+encriptar.</p>
+<p><a 
+href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/">https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/</a></p>
+<h2
+ class="addon">2. NoScript Security Suite</h2>
+<p>Esta es la otra extensión incluida en el Tor Browser, 
+considerada como indispensable, pues al bloquear Javascript aumenta 
+considerablemente la seguridad y se protege mucho tu privacidad, porque 
+al ejecutar Javascripts estas expuesto a ataques o además se libera 
+información sobre tu sistema. </p>
+  <p>Es recomendado que configures NoScript ara que también 
+bloqueé Iframes</p>
+<p><a 
+href="https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=search">https://addons.mozilla.org/en-US/firefox/addon/noscript/?src=search</a></p>
+<h2>3.
+ Privacy Badger</h2>
+<p>Este plugin es proporcionado por Electronic Frontier Foundation
+ (EFF), los cuales han creado un test para determinar si estás protegido
+ de ser identificado en base a la huella digital que deja tu explorador 
+web: <a 
+href="https://panopticlick.eff.org/">https://panopticlick.eff.org/</a></p>
+<p>Bloquea
+ rastreadores ocultos; sin emabargo, no está incluido en el Tor Browser 
+debido a que algunas páginas pueden averiguar que rastreadores están 
+bloqueados, toma en cuenta que Privacy Badger va creando una lista de 
+bloqueo conforme lo usas. La razón por la que Tor no lo incluye es por 
+que la seguridad por medio Tor consiste en que todos parezcan 
+iguales.</p>
+<p>Cuando usas Tor  debes mentalizarte que en efecto, los sitios 
+que visites te va a identificar como un usuario de Tor, pero pasa que 
+otro millón de personas también usan Tor. Así que si bien saben que usas
+ Tor, no lograrán distinguirte entre el otro millón de personas. 
+<p>Mientras que el enfoque de Tor es confundir, el enfoque de EFF 
+está más en exponer lo menos posible tu información. Si quieres aprender
+ sobre el finguerprinting y como protegerte de él, lee por 
+favor:</p>
+<blockquote data-secret="HGbhLGPNhm" 
+class="wp-embedded-content"><p><a 
+href="https://lignux.com/hardening-de-firefoxiceweasel-y-tecnicas-de-ofuscacion-de-fingerprint/">Hardening
+ de Firefox/Iceweasel y técnicas de ofuscación de 
+fingerprint</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" 
+security="restricted" style="position: absolute; clip: rect(1px, 1px, 
+1px, 1px);" 
+src="https://lignux.com/hardening-de-firefoxiceweasel-y-tecnicas-de-ofuscacion-de-fingerprint/embed/#?secret=HGbhLGPNhm"
+ data-secret="HGbhLGPNhm" width="600" height="338" 
+title="&#8220;Hardening de Firefox/Iceweasel y técnicas de 
+ofuscación de fingerprint&#8221; &#8212; LiGNUx" frameborder="0"
+ marginwidth="0" marginheight="0" 
+scrolling="no"></iframe></p>
+<p><a 
+href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/?src=search">https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/?src=search</a></p>
+<h2>4.
+ Ublock origin</h2>
+<p>Este es un bloqueador no comercial a diferencia de AdBlock, y 
+ocupa muy poca memoria y RAM, tiene opciones avanzadas que te permiten 
+aprovecharlo aun mas, por ejemplo puedes bloquear las redes sociales en 
+todos  los sitios y los botones de compartir y seguir. Por la misma 
+razón que privacy Badger no se puede incluir en Tor Browser.</p>
+<p><a 
+href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?src=search">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?src=search</a></p>
+<h2>5.
+ Random Agent Spoofer</h2>
+<p>Es único plugin que he probado que permite falsear el User 
+Agent en el Javascript satisfactoriamente; utiliza un enfoque de 
+seguridad basado en la entropía. Donde cambia el user agent cada tantos 
+minutos. Así como alterar todo tipo de headers, como los de idioma, de 
+formato. Es un plugin demasiado completo  que debería ser más 
+recomendado y utilizado. Vale la pena mencionar que  el test de 
+panopticlick no lo va a considerar seguro para el finguerprinting, pero 
+si lo es. La cuestión es que se basa en otro enfoque.</p>
+<p><a 
+href="https://addons.mozilla.org/en-US/firefox/addon/random-agent-spoofer/?src=ss">https://addons.mozilla.org/en-US/firefox/addon/random-agent-spoofer/?src=ss</a></p>
+<h2>6.
+ Self-Destructing Cookies</h2>
 <p>Elimina las cookies tan pronto las dejes de usar</p>
-<p><a href="https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/?src=search">https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/?src=search</a></p>
+<p><a 
+href="https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/?src=search">https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/?src=search</a></p>
+
   
 <h2>7. Lightbeam</h2>
-<p>Te permite analizar que conecciones realizan los sitios que visitas en tiempo real o en el pasado, por medio de gráficos o por listas; también te permite bloquear  las conecciones de sitios de terceros de forma personalizada. De forma que no te espien. Ayuda mucho configurar Ublock de antemano para bloquear redes sociales y Google Analytics de forma que ya no tengas que hacerlo con Lightbeam manualmente.</p>
-<h2>8.  DuckDuckgo SSL</h2>
- <p>Es momento de cambiar nuestro hábitos de busqueda y usar un buscador que no te rastreé. Adicionalmente también está disponible para usarse directamente con tor a travez de una dirección onion: https://3g2upl4pq6kufc4m.onion</p>
+<p>Te permite analizar que conecciones realizan los sitios que 
+visitas en tiempo real o en el pasado, por medio de gráficos o por 
+listas; también te permite bloquear  las conecciones de sitios de 
+terceros de forma personalizada. De forma que no te espien. Ayuda mucho 
+configurar Ublock de antemano para bloquear redes sociales y Google 
+Analytics de forma que ya no tengas que hacerlo con Lightbeam 
+manualmente.</p>
 
-<a href="https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-ssl/">https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-ssl/</a>
-  
+<h2>8. Request Policy</h2>
+<p>Bloquea sitios de terceros que no están alojados en el mismo servidor del sitio, de entrada viene con una lista de excepciones como Youtube que carga contenido de Google, porque Youtube es de Google.
+
+<a href="https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/">https://addons.mozilla.org/en-US/firefox/addon/requestpolicy/</a>
+
 <h2>9. Certificate Patrol</h2>
-<p>Investigadores de Princeton investigaron el problema de lo fácil que es general un certificado falso de entre tantas autoridades de SSL y hacerse pasar por la página web. De forma que recomiendan esta extensión:
- Esta extensión va a analizar los certificados SSL en busqueda de cambios para así protegerte de los ataques de Man in The Middle.</p>
+<p>Investigadores de Princeton investigaron el problema de lo 
+fácil que es general un certificado falso de entre tantas autoridades de
+ SSL y hacerse pasar por la página web. De forma que recomiendan esta 
+extensión:
+ Esta extensión va a analizar los certificados SSL en busqueda de 
+cambios para así protegerte de los ataques de Man in The 
+Middle.</p>
   
- <a href="https://addons.mozilla.org/en-us/firefox/addon/certificate-patrol/">https://addons.mozilla.org/en-us/firefox/addon/certificate-patrol/</a>
+ <a 
+href="https://addons.mozilla.org/en-us/firefox/addon/certificate-patrol/">https://addons.mozilla.org/en-us/firefox/addon/certificate-patrol/</a>
+
   
   <h2>10. Twitter Link Expander</h2>
 
-<p>Esta extensión remplaza todos los links acortados a los link reales, de forma que twitter no te espie. A veces Twitter oculta completamente el link sobre todo cuando en un twit escribes el link al final. Por eso no hay que escribirlos al final, hay que escribirlos antes del twit para poder respetar el derecho a la privacidad de las otras personas.</p>
+<p>Esta extensión remplaza todos los links acortados a los link 
+reales, de forma que twitter no te espie. A veces Twitter oculta 
+completamente el link sobre todo cuando en un twit escribes el link al 
+final. Por eso no hay que escribirlos al final, hay que escribirlos 
+antes del twit para poder respetar el derecho a la privacidad de las 
+otras personas.</p>
 
-  <a href="https://addons.mozilla.org/en-US/firefox/addon/twitter-link-expander/?src=search">https://addons.mozilla.org/en-US/firefox/addon/twitter-link-expander/?src=search</a>
+  <a 
+href="https://addons.mozilla.org/en-US/firefox/addon/twitter-link-expander/?src=search">https://addons.mozilla.org/en-US/firefox/addon/twitter-link-expander/?src=search</a>
 
 
-<p>Alternativamente puedes usar este Script por medio de Grease Monkey:</p>
+<p>Alternativamente
+ puedes usar este Script por medio de Grease Monkey:</p>
 
-<a href="https://openuserjs.org/scripts/parsa-kafi/t.co_bypass">https://openuserjs.org/scripts/parsa-kafi/t.co_bypass</a>
+<a 
+href="https://openuserjs.org/scripts/parsa-kafi/t.co_bypass">https://openuserjs.org/scripts/parsa-kafi/t.co_bypass</a>
 </html>
