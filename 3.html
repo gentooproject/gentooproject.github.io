@@ -13,7 +13,7 @@
 <p><code>chattr +i /opt/tor.img</code></p>
 <p>Ahora crea un script in /etc/rc.d/rc.local con el siguiente contenido:</p></br>
 <code>#! /bin/bash</code></br>
-<code>mkdir -p /mnt/1</code></br>
+<code>mkdir -p /mnt/1 || exit 1</code></br>
 <code>if [ ! "$(mount | grep tor.img)" ] ; then mount -t ext2 -o ro /opt/tor.img /mnt/1 ; fi || exit 1</code></br>
 <code>mkdir -p /mnt/2 || exit 1</code></br>
 <code>if [ ! "$(mount | grep /mnt/2)" ]; then mount -t tmpfs tmpfs /mnt/2; fi || exit 1</code></br>
