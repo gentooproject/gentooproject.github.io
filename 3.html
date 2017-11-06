@@ -15,11 +15,12 @@
 <code>#! /bin/bash</code></br>
 <code>mkdir -p /mnt/1</code></br>
 <code>if [ ! "$(mount | grep tor.img)" ] ; then mount -t ext2 -o ro /opt/tor.img /mnt/1 ; fi || exit 1</code></br>
-<code>mkdir -p /mnt/2dir -p /mnt/2</code></br>
+<code>mkdir -p /mnt/2</code></br>
 <code>if [ ! "$(mount | grep /mnt/2)" ]; then mount -t tmpfs tmpfs /mnt/2; fi || exit 1</code></br>
 <code>mkdir -p /mnt/2/1  || exit 1</code></br>
 <code>mkdir -p /mnt/2/2  || exit 1</code></br>
 <code>mkdir -p /mnt/2/3 || exit 1</code></br>
+<code>	if [ ! "$(mount | grep overlay)" ]; then  mount -t overlay overlay -o lowerdir=/mnt/1,upperdir=/mnt/2/1,workdir=/mnt/2/2 /mnt/2/3 ; fi</code></br>
 
 
 </html>
