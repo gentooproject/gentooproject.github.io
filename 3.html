@@ -1,0 +1,25 @@
+<html>
+<h1>Usar Tor en modo de sólo lectura </h2>
+<p>Tor no debe modificarse , o al menos lo menos posible, tampoco debe mantener archivos descargados en las carpetas de su sandbox, de esta forma es buena idea adoptar una política donde los cambios que hagamos a Tor se pierdan al reiniciar, porsupuesto, esto también incrementará la seguridad un poco.</p>
+
+<p>Crea un archivo vacío de al menos 500MB:</p>
+<p><code>dd if=/dev/zero of=/opt/tor.img bs=1k count=500000</code></p>
+<p>Dale formato:
+<p><code>mkfs.ext2 /opt/tor.img</code></p>
+<p>Monta el archivo</p>
+<p><code>mount /opt/tor.img /mnt/temp</code></p>
+<p>Descarga y extraé el Tor Browser ahí</p>
+<p>Desmonta el archivo y protegele contra escritura</p>
+<p><code>chattr +i /opt/tor.img</code></p>
+<p>Finalmente crea un script in /etc/rc.d/rc.local con el siguiente contenido:</p></br>
+<code>#! /bin/bash</code></br>
+<code>mkdir -p /mnt/1</code></br>
+<code>if [ ! "$(mount | grep tor.img)" ] ; then mount -t ext2 -o ro /opt/tor.img /mnt/1 ; fi || exit 1</code></br>
+<code>mkdir -p /mnt/2dir -p /mnt/2</code></br>
+<code>if [ ! "$(mount | grep /mnt/2)" ]; then mount -t tmpfs tmpfs /mnt/2; fi || exit 1</code></br>
+<code>mkdir -p /mnt/2/1  || exit 1</code></br>
+<code>mkdir -p /mnt/2/2  || exit 1</code></br>
+<code>mkdir -p /mnt/2/3 || exit 1</code></br>
+
+
+</html>
