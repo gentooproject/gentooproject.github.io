@@ -11,7 +11,7 @@
 <p>Descarga y extraé el Tor Browser ahí</p>
 <p>Desmonta el archivo y protegele contra escritura</p>
 <p><code>chattr +i /opt/tor.img</code></p>
-<p>Finalmente crea un script in /etc/rc.d/rc.local con el siguiente contenido:</p></br>
+<p>Ahora crea un script in /etc/rc.d/rc.local con el siguiente contenido:</p></br>
 <code>#! /bin/bash</code></br>
 <code>mkdir -p /mnt/1</code></br>
 <code>if [ ! "$(mount | grep tor.img)" ] ; then mount -t ext2 -o ro /opt/tor.img /mnt/1 ; fi || exit 1</code></br>
@@ -21,6 +21,9 @@
 <code>mkdir -p /mnt/2/2  || exit 1</code></br>
 <code>mkdir -p /mnt/2/3 || exit 1</code></br>
 <code>	if [ ! "$(mount | grep overlay)" ]; then  mount -t overlay overlay -o lowerdir=/mnt/1,upperdir=/mnt/2/1,workdir=/mnt/2/2 /mnt/2/3 ; fi</code></br>
+<p>Finalmente dale permisos de ejecución</p>
+<p><code>sudo chmod +x /etc/rc.d/rc.local</code></p>
 
-
+<p>Nota: Es más seguro Qubes OS con Whonix y utilizar Whonix como una máquina virtual desechable,  puedes leer más en esta entrada en como hacer esto de una máquina virtual desechable en RAM: 
+  <a href="https://rpm.li/0">rpm.li/0</a>
 </html>
