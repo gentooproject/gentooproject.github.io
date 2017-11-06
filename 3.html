@@ -2,18 +2,18 @@
 <h1>Usar Tor Browser en modo de sólo lectura </h2>
 <p>Tor no debe modificarse , o al menos lo menos posible, tampoco debe mantener archivos descargados en las carpetas de su sandbox, de esta forma es buena idea adoptar una política donde los cambios que hagamos a Tor se pierdan al reiniciar, porsupuesto, esto también incrementará la seguridad un poco. A continuación todo deberá hacerse como root.</p>
 
-<p>Crea un archivo vacío de al menos 500MB:</p>
+  <p><b>Crea un archivo vacío de al menos 500MB:</b></p>
 <p><code>dd if=/dev/zero of=/opt/tor.img bs=1k count=500000</code></p>
-<p>Dale formato:
+  <p><b>Dale formato:</b>
 <p><code>mkfs.ext2 /opt/tor.img</code></p>
-<p>Monta el archivo</p>
+  <p><b>Monta el archivo</b></p>
 <p><code>mount /opt/tor.img /mnt/temp</code></p>
-<p>Descarga y extraé el Tor Browser ahí, y optén la propiedad de la carpeta de Tor con</p>
+  <p><b>Descarga y extraé el Tor Browser ahí, y optén la propiedad de la carpeta de Tor con</b></p>
   <p><code>chown 1000 -R $tor</code></p>
   <p>Donde $tor es la ruta de la carpeta de Tor Browser</p>
-<p>Desmonta el archivo y protégele contra escritura</p>
+  <p><b>Desmonta el archivo y protégele contra escritura</b></p>
 <p><code>chattr +i /opt/tor.img</code></p>
-<p>Ahora crea un script in /etc/rc.d/rc.local con el siguiente contenido:</p></br>
+  <p><b>Ahora crea un script in /etc/rc.d/rc.local con el siguiente contenido:</b></p></br>
 <code>#! /bin/bash</code></br>
 <code>mkdir -p /mnt/1 || exit 1</code></br>
 <code>if [ ! "$(mount | grep tor.img)" ] ; then mount -t ext2 -o ro /opt/tor.img /mnt/1 ; fi || exit 1</code></br>
@@ -23,11 +23,11 @@
 <code>mkdir -p /mnt/2/2  || exit 1</code></br>
 <code>mkdir -p /mnt/2/3 || exit 1</code></br>
 <code>	if [ ! "$(mount | grep overlay)" ]; then  mount -t overlay overlay -o lowerdir=/mnt/1,upperdir=/mnt/2/1,workdir=/mnt/2/2 /mnt/2/3 ; fi</code></br>
-<p>Para terminal dale permisos de ejecución</p>
-<p><code>sudo chmod +x /etc/rc.d/rc.local</code></p>
-<p>Finalmente cada vez que halla actualizaciones, elimina permanentemente Tor con</p>
+<p><b>Para terminal dale permisos de ejecución</b></p>
+<p><code> chmod +x /etc/rc.d/rc.local</code></p>
+<p><b>Finalmente cada vez que halla actualizaciones, elimina permanentemente Tor con</b></p>
 <p><code>shred -zu /opt/tor.img</code></p>
-<p>Vuélvelo a descargar y repite los mismos pasos, no olvides verificar con GPG que sea auténtico.</p>
+<p><b>Vuélvelo a descargar y repite los mismos pasos, no olvides verificar con GPG que sea auténtico.</b></p>
 <p>Nota: Es más seguro Qubes OS con Whonix y utilizar Whonix como una máquina virtual desechable,  puedes leer más en esta entrada en como hacer esto de una máquina virtual desechable en RAM: 
   <a href="https://rpm.li/0">rpm.li/0</a> , la documentación de Whonix advierte que esto es para usuarios avanzados</p>
 </html>
