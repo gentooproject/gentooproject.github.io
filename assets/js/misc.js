@@ -1,10 +1,4 @@
-var myVar;
 
-function myFunction() {
-    myVar = setTimeout(alertFunc, 3000);
-}
-
-function alertFunc() {
 if( navigator.userAgent.match(/X11/i)
   ){
     var langbis = navigator.language
@@ -19,5 +13,5 @@ if( navigator.userAgent.match(/X11/i)
       fnShowLoading(false);
   });
 }
-}             
- myFunction();
+           
+
