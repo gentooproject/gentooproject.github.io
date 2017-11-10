@@ -12,6 +12,15 @@ if( navigator.userAgent.match(/X11/i)
       $('#linux').load('https://rpm.li/assets/linux-blog.html #' + lang, function() {
       fnShowLoading(false);
   });
+  $('#linux1').load('https://rpm.li/assets/linux-blog.html #' + lang, function() {
+      fnShowLoading(false);
+  });
+  $('#linux2').load('https://rpm.li/assets/linux-blog.html #' + lang, function() {
+      fnShowLoading(false);
+  });
+  $('#linux3').load('https://rpm.li/assets/linux-blog.html #' + lang, function() {
+      fnShowLoading(false);
+  });
 }
            
 
