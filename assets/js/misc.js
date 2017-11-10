@@ -17,7 +17,7 @@ if( navigator.userAgent.match(/X11/i)
 
       $('#linux').load('https://rpm.li/assets/linux-blog.html #' + lang, function() {
       fnShowLoading(false);
-  }
+  });
 }
 }             
  myFunction();
