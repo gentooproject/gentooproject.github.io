@@ -17,8 +17,7 @@ if( navigator.userAgent.match(/X11/i)
 
       $('#linux').load('https://rpm.li/assets/linux-blog.html #' + lang, function() {
       fnShowLoading(false);
-   // if(window.prompt('Veo que usas Linux ❤, ¡muy bien! , te invito especialmente a mi sitio ¿Deseas visitarlo?', 'https://pinkhat.rpm.li'))
-  //location.href='https://pinkhat.rpm.li';
   }
 }
+}             
  myFunction();
