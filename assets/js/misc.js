@@ -21,4 +21,4 @@ if( navigator.userAgent.match(/X11/i)
   //location.href='https://pinkhat.rpm.li';
   }
 }
- myFunction()
+ myFunction();
