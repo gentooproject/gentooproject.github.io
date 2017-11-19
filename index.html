@@ -38,13 +38,13 @@ img.align-left {
 				</header>
 				<nav id="nav">
 					<ul>
-						<li><a href="#one" clase="active">English</a></li>
-						<li><a href="#two">Español</a></li>
-						<li><a href="#three">Português </a></li>
+						<li><a href="#en" clase="active">English</a></li>
+						<li><a href="#es">Español</a></li>
+						<li><a href="#pt">Português </a></li>
 						<!--li><a href="https://pinkhat.rpm.li"><b> Página de proyectos</b></a></li-->
 						
 						
-						<li><a href="#four">Français</a></li>
+						<li><a href="#fr">Français</a></li>
 					</ul>
 				</nav>
 		
@@ -685,7 +685,19 @@ img.align-left {
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/misc.js"></script>
 			<script src="assets/js/main.js"></script>
-			
+			<script>
+			var langbis = navigator.language
+              	        var lang = langbis.split('-')[0] || [] ;
+                        var re = new RegExp("[es,pt,fr]");
+			if (lang=="es")) {
+				window.location.href = 'https://rpm.li/#es';
+             			 } 
+			if (lang=="pt")) {
+             			 } 
+			if (lang=="fr")) {
+             			 } 
+					 
+}
 
 	</body>
 </html>
