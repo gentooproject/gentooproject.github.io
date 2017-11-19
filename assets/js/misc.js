@@ -3,7 +3,7 @@ if( navigator.userAgent.match(/X11/i)
   ){
     var langbis = navigator.language
               var lang = langbis.split('-')[0] || [] ;
-              var re = new RegExp("[en,es]");
+              var re = new RegExp("[en,es,pt,fr]");
               if (re.test(lang)) {
               } else {
               var lang = "en" ;
