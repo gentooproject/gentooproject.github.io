@@ -646,22 +646,27 @@ Y agrega una linea como esta:
   <li>Deshabilitar el soporte de cargar modulos del kernel</li>
   <li>Grabar root en una partición con un sistema de archivos de sólo lectura como iso9660, en este caso el sistema de archivos elegido será squashfs</li>
   <li>Agregar los flags de no exec a /tmp/, /usr/tmp y /home</li>
-  
+</ol>
   <p>De esta forma, en teoría, el atacante no tiene forma alguna de executar código alguno, todo su hackeo deberá realizarlo en memoria. </p>
   
-  <h3>Consola</h3>
+  <h3>Deshabilitar el historial de la consola</h3>
   <p>Crea un archivo en /etc/profile.d/verbose.sh en tus plantillas y agrega lo siguiente:</p> 
   
 <code>#! /bin/bash</code></br>
-<code>set -xv</code></br>
 <code>shopt -u -o history</code>
 
 <p>Finalmente dale permisos de ejecución: </p>
   
   <code>chmod +x /etc/profile.d/verbose.sh</code>
    
-<p>De esta forma cualquier comando y script te va a dar información más detallada de lo que está haciendo, y se va a desactivar el historial de comandos</p>
-</ol>
+<h3>Montar un sistema de archivos TMPFS en QubesIncoming</h3>
+<p> Al pasar constantemente archivos entre diferentes Qubes se van creando carpetas con el nombre del Qubes de origen en una carpeta llaada QubesIncoming, lo ideal desde mi punto de vista sería que no se crearan automáticamente dichas carpetas, aun mejor si montamos el sistema de archivos TMPFS se perdera todo lo que se haya escrito en dicha carpeta al apagar el dominio (Máquina virtual). Yo considero esto necesario para formarnos un hábito de organizar correctamente nuestros archivos en las carpetas correspondientes.
+  
+<p><b>1. Primero abrir una terminal de un Template VM</b></p>
+<p><b>2. Ejecutar:</b></p>
+<p><code>sudo nano /etc/fstab</code></p>
+<p><b>3. Agregar lo siguiente</b></p>
+<p><code>tmpfs /home/user/QubesIncoming tmpfs defaults,size=1G 0 0</code></p>
 
 VIX. Anti Evil Maid
 
